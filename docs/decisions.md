@@ -397,3 +397,29 @@ This is the study material for defending the architecture in interviews.
 - **Decision:** continue with work that needs no Textract (extraction contract, model gateway, rules,
   injection detector, evaluation harness). Textract integration and the real-response fixtures follow
   activation. Tier priorities are unchanged; only the order inside days 2-3 moves.
+
+---
+
+## D-028 — Textract verified end to end (first real calls, 2026-10-14)
+
+- **Account:** after the upgrade to a paid plan, `GetDocumentAnalysis` with a fake job id returns
+  `InvalidJobIdException` in `us-east-1` and `us-east-2` (it means the account is subscribed). One early
+  attempt in `us-east-2` failed to connect and succeeded on retry (transient).
+- **Real calls (2 pages, estimated cost about $0.065 at us-west-2 prices, not yet checked in Cost
+  Explorer):** `AnalyzeDocument` FORMS on `APP-0001/application_form_1.pdf` and QUERIES on
+  `APP-0001/employment_letter_1.pdf`, using the synchronous API with the PDF bytes (no S3 needed).
+- **FORMS result:** all 9 form fields read correctly, confidence about 95%. Two extra pairs appeared: the
+  empty "Applicant signature" and a spurious pair split out of the "Synthetic sample document - ..."
+  notice (confidence 60.7). The field mapper ignores keys that do not match a known label (D-026).
+- **QUERIES result: 5 of 6 correct, and one instructive failure.** "What is the name of the employer?"
+  answered the EMPLOYEE's name with confidence 54%. Two correct answers were also below the 80%
+  threshold: `job_title` (75%) and, close to it, `monthly_salary` (85%). Consequences: (1) the
+  low-confidence -> human review path is exercised by real data (a wrong answer at 54% would be
+  caught); (2) the 80% threshold will also send some correct answers to review, a precision/recall
+  trade-off to measure rather than assume; (3) query wording must be tuned.
+- **Evaluation integrity:** `APP-0001` is in the TEST split. It was used only to check connectivity and
+  its outcome must NOT guide tuning. Query wording and thresholds are tuned on DEV files only.
+- **Fixtures:** both raw responses (ResponseMetadata removed, 0 account identifiers found) are committed
+  under `tests/fixtures/textract/` so the Textract parser can be tested in CI without AWS.
+- **Bucket note:** the Textract console created `textract-console-us-east-2-*` in this account. It is
+  not a project resource and is not used or touched; the project uses the synchronous API with bytes.
