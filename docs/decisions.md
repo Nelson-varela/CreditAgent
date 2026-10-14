@@ -423,3 +423,25 @@ This is the study material for defending the architecture in interviews.
   under `tests/fixtures/textract/` so the Textract parser can be tested in CI without AWS.
 - **Bucket note:** the Textract console created `textract-console-us-east-2-*` in this account. It is
   not a project resource and is not used or touched; the project uses the synchronous API with bytes.
+
+---
+
+## D-029 — Textract extractor, official prices and their cost consequences
+
+- **Date:** 2026-10-14
+- **Decision:** `TextractExtractor` implements the `Extractor` contract with the synchronous API:
+  FORMS for structured documents, QUERIES for the employment letter. Parsing is a pure function tested
+  against the two real responses of D-028. A pair's confidence is the MINIMUM of its key and value
+  confidence (Textract reports 0-100; the project uses 0-1). Empty values are dropped. Multi-page and
+  oversized files are rejected locally before any request is sent (nothing is paid for a call Textract
+  would refuse). The client uses adaptive retries and explicit timeouts.
+- **Prices (official AWS Price List API, US East (Ohio), published 2026-09-11, checked 2026-10-14):**
+  Forms $0.05, Queries $0.015, Forms+Queries $0.055 per page; the two verification calls cost exactly
+  $0.065, as estimated. Stored dated in `config.py`; an unknown feature combination raises.
+- **Cost of a run:** one complete file = 8 FORMS pages + 1 QUERIES page = $0.415. The 3 initial files
+  cost about $1.25 and all 40 files at most $16.60 (less when documents are missing). Replaces the
+  earlier $23-25 estimate, which used us-west-2 prices.
+- **Alternatives:** FORMS+QUERIES on every page ($0.055: more expensive and unnecessary for forms);
+  asynchronous API (needs S3, see D-023).
+- **Trade-off:** taking the minimum confidence is conservative: it sends more fields to human review
+  (a measured precision/recall trade-off against `TEXTRACT_MIN_CONFIDENCE`, D-028).

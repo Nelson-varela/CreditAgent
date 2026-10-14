@@ -63,12 +63,18 @@ class Settings(BaseSettings):
     # --- Semantic cache (Tier 2). Initial guess, to be tuned against policy_qa.jsonl ---
     cache_similarity_threshold: float = 0.92
 
-    # --- Prices. Left empty on purpose: they are filled from the official pricing pages
-    # together with `pricing_checked_on`, once model IDs are pinned. A missing price must
-    # fail loudly instead of silently reporting a cost of zero. ---
-    pricing_checked_on: date | None = None
+    # --- Prices, always from the official pricing sources and dated by `pricing_checked_on`.
+    # Model prices stay empty until the gateway pins model IDs. A missing price must fail
+    # loudly instead of silently reporting a cost of zero. ---
+    pricing_checked_on: date | None = date(2026, 10, 14)
     model_prices: dict[str, ModelPrice] = {}
-    textract_price_per_page_usd: dict[str, float] = {}
+    # Textract synchronous AnalyzeDocument, US East (Ohio), from the official AWS Price List API
+    # (publication 2026-09-11). Key = "+".join(sorted lower-case features).
+    textract_price_per_page_usd: dict[str, float] = {
+        "forms": 0.05,
+        "queries": 0.015,
+        "forms+queries": 0.055,
+    }
 
     # --- Langfuse ---
     langfuse_public_key: SecretStr | None = None

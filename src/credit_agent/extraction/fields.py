@@ -60,3 +60,10 @@ def extract_fields(raw: RawExtraction) -> list[ExtractedField]:
             )
         )
     return fields
+
+
+def low_confidence_fields(
+    fields: list[ExtractedField], min_confidence: float
+) -> list[ExtractedField]:
+    """Fields below the threshold, or that could not be parsed: they need human review."""
+    return [f for f in fields if f.confidence < min_confidence or f.normalized_value is None]

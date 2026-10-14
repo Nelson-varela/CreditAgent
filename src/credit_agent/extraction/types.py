@@ -33,6 +33,8 @@ class RawExtraction(StrictModel):
     sha256: str
     doc_type: DocType
     page_count: int = Field(ge=1)
+    # Billable features (e.g. ["FORMS"]); empty for free extractors. Basis of the cost per document.
+    features: list[str] = Field(default_factory=list)
     lines: list[RawLine]
     key_values: list[RawKeyValue]
 
