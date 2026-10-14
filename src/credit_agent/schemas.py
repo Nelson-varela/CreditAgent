@@ -12,7 +12,7 @@ from typing import Any
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, model_validator
 
 
-class _Model(BaseModel):
+class StrictModel(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
 
@@ -138,7 +138,7 @@ def can_transition(
 # --------------------------------------------------------------------------- models
 
 
-class DocumentRef(_Model):
+class DocumentRef(StrictModel):
     """A document attached to an application (one single-page PDF)."""
 
     doc_type: DocType
@@ -146,7 +146,7 @@ class DocumentRef(_Model):
     page_count: int = Field(default=1, ge=1)
 
 
-class ExtractedField(_Model):
+class ExtractedField(StrictModel):
     name: str
     value: str
     normalized_value: str | None = None
@@ -156,7 +156,7 @@ class ExtractedField(_Model):
     source_block_id: str | None = None
 
 
-class Evidence(_Model):
+class Evidence(StrictModel):
     doc_type: DocType
     page: int = Field(ge=1)
     field: str
@@ -164,7 +164,7 @@ class Evidence(_Model):
     expected_value: str | None = None
 
 
-class Finding(_Model):
+class Finding(StrictModel):
     finding_id: str
     defect_type: DefectType
     severity: Severity
@@ -183,7 +183,7 @@ class Finding(_Model):
         return self
 
 
-class Application(_Model):
+class Application(StrictModel):
     application_id: str
     owner_id: str
     applicant_name: str
@@ -195,7 +195,7 @@ class Application(_Model):
     review_reasons: list[str] = Field(default_factory=list)
 
 
-class Proposal(_Model):
+class Proposal(StrictModel):
     proposal_id: str
     application_id: str
     action: ProposalAction
@@ -215,7 +215,7 @@ class Proposal(_Model):
         return self
 
 
-class AuditEvent(_Model):
+class AuditEvent(StrictModel):
     """Immutable by construction: the audit log is append-only."""
 
     model_config = ConfigDict(extra="forbid", frozen=True)

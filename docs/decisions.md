@@ -122,3 +122,35 @@ This is the study material for defending the architecture in interviews.
 - **Why:** Prices must come from the official pages with a consultation date; a silent zero would make
   the reported cost-per-file look better than reality.
 - **Trade-off:** Cost tracking cannot run until day 2 fills the table.
+
+---
+
+## D-012 — Policy YAML: one home per number, templated rule texts, severity per rule
+
+- **Date:** 2026-10-14
+- **Decision:** All thresholds live once under `parameters` in `data/policies/policy_v1.yaml`. Rule
+  texts are templates (`{income_tolerance:.0%}`) rendered from those parameters. The loader
+  (`policy.py`) validates: placeholders must be known parameters, rule ids must match their section,
+  ids are unique, every `DefectType` has at least one rule, and a rule has a defect type, severity and
+  action together or none of them (informational rules).
+- **Alternatives:** literal numbers inside each rule text; thresholds in `config.py`; severity defined
+  per defect type.
+- **Why:** The manual (RAG corpus), the deterministic rules and the ground truth read the same
+  numbers, so they cannot disagree; changing a threshold changes all three. Severity is per rule
+  because `POLICY_VIOLATION` groups rules of different gravity (DTI limit = high, tenure = medium).
+- **Trade-off:** Rule texts are templates, so reading the raw YAML is slightly less direct than reading
+  the rendered manual. Severity per rule means a defect type can map to several severities; findings
+  always carry the `policy_rule_id` that disambiguates.
+
+## D-013 — Business definitions fixed in the policy (to keep rules and labels unambiguous)
+
+- **Date:** 2026-10-14
+- **Decision:** Income tolerance is relative to the **documented** amount and a difference exactly
+  at the tolerance is accepted. Verified income = average net salary on payslips (declared income is
+  never the DTI denominator). Existing debt = average of the installments shown on the bank
+  statements. Ages are measured against `AS_OF_DATE`; a payslip's age counts from its period end.
+- **Alternatives:** tolerance relative to the declared amount; strict inequality at the boundary.
+- **Why:** The near-threshold hard cases (just under / just over tolerance) only make sense with an
+  explicit boundary convention; the generator and the rule engine must agree on it.
+- **Trade-off:** These are my modelling choices for a synthetic policy, not an industry standard.
+  Initial parameter values (10% tolerance, 40% DTI, COP 50M review threshold, ...) are fictional.
