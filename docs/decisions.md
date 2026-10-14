@@ -176,3 +176,42 @@ This is the study material for defending the architecture in interviews.
 - **Identity number:** the identity document is a state driver license / state ID, with a fictional ID
   number format. Social Security Numbers are deliberately NOT generated: even synthetic SSNs can collide
   with real people's, which is unacceptable in a public repo.
+
+---
+
+## D-015 — One independent RNG per file: `Random(f"{seed}:{index}")`
+
+- **Date:** 2026-10-14
+- **Decision:** Every file derives its own RNG (and re-seeds Faker) from `(seed, index)`.
+- **Alternatives:** a single RNG stream consumed in order.
+- **Why:** Reproducibility must survive changing `--n`: file 7 is identical whether 10 or 40 files are
+  generated, and adding a defect type later does not reshuffle unrelated files. The dev/test split and
+  published metrics therefore stay stable.
+- **Trade-off:** Output depends on pinned Faker and Python `random` behaviour; a Faker upgrade changes the
+  data, which is why versions are pinned (D-008) and the ground truth JSON is versioned.
+
+## D-016 — Two views of every field: printed value and canonical truth
+
+- **Date:** 2026-10-14
+- **Decision:** `DocumentContent.fields` holds what is printed (e.g. `"$7,628.59"`, `"06/29/2026"`);
+  `canonical` holds the normalized truth (`"7628.59"`, ISO date) and only for fields scored in the
+  extraction eval. Money and dates come from typed values; names and addresses go through the shared
+  `normalize.py`.
+- **Alternatives:** compute truth by normalizing the printed text with the extraction normalizer.
+- **Why:** If truth were derived with the same normalizer under test, a normalizer bug would cancel
+  out and never show up in the metrics. Typed values keep that check honest where possible.
+- **Trade-off:** For names and addresses the generator and the extractor share one function, so a
+  bug there is not caught by the eval; explicit unit cases in `test_normalize.py` mitigate it.
+
+## D-017 — "Clean" is clean by construction and verified by an independent check
+
+- **Date:** 2026-10-14
+- **Decision:** The persona is sized below the policy limits (DTI cap 0.30 vs policy 0.40, payslips at
+  least 3 days inside the age limit, tenure at least 3 months above the minimum). A test re-states the
+  policy from canonical values and asserts 300 files across several reference dates are clean, plus
+  mutation tests proving that the check fails on broken files.
+- **Alternatives:** trust the generator; wait for the day-3 rule engine to validate it.
+- **Why:** The false-positive-rate metric is meaningless if "clean" files hide real defects. A
+  generator bug would otherwise surface as a fake system error.
+- **Trade-off:** The independent check duplicates policy logic in tests; on day 3 the real rule
+  engine must also report zero findings on clean files, which cross-checks both.
