@@ -23,7 +23,7 @@ def raw() -> dict[str, Any]:
 
 def test_real_policy_loads(policy: Policy) -> None:
     assert policy.policy_version == "1.0.0"
-    assert policy.currency == "COP"
+    assert policy.currency == "USD"
 
 
 def test_every_defect_type_has_a_rule(policy: Policy) -> None:
@@ -40,8 +40,8 @@ def test_every_rule_renders_without_leftover_placeholders(policy: Policy) -> Non
 def test_rendered_text_uses_parameter_values(policy: Policy) -> None:
     assert "10%" in policy.render("R-3.1")
     assert "40%" in policy.render("R-5.1")
-    assert "1.75%" in policy.render("R-5.2")
-    assert "50,000,000" in policy.render("R-6.1")
+    assert "1.00%" in policy.render("R-5.2")
+    assert "$25,000" in policy.render("R-6.1")
 
 
 def test_unknown_rule_raises(policy: Policy) -> None:
@@ -96,8 +96,8 @@ def test_uncovered_defect_type_is_rejected(raw: dict[str, Any]) -> None:
     [
         ("income_tolerance", 1.5),
         ("max_dti", 0),
-        ("max_amount_cop", 500_000),  # below min_amount_cop
-        ("mandatory_review_amount_cop", 200_000_000),  # above max_amount_cop
+        ("max_amount_usd", 500),  # below min_amount_usd
+        ("mandatory_review_amount_usd", 200_000),  # above max_amount_usd
     ],
 )
 def test_invalid_parameters_are_rejected(raw: dict[str, Any], field: str, value: float) -> None:

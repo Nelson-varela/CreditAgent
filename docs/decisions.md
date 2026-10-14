@@ -36,7 +36,9 @@ This is the study material for defending the architecture in interviews.
 - **Trade-off:** Trace data leaves the machine. Mitigation: ID numbers are masked in traces even though
   all data is synthetic. Free-tier limits apply.
 
-## D-004 — Language: everything in English, Colombian data
+## D-004 — Language: everything in English (locale superseded by D-014)
+
+- **Status:** the English-only part stands; the Colombian locale was replaced by a US locale in D-014.
 
 - **Date:** 2026-10-14
 - **Decision:** Documents, policy manual, code, comments, README, docs and eval report are all in
@@ -153,4 +155,24 @@ This is the study material for defending the architecture in interviews.
 - **Why:** The near-threshold hard cases (just under / just over tolerance) only make sense with an
   explicit boundary convention; the generator and the rule engine must agree on it.
 - **Trade-off:** These are my modelling choices for a synthetic policy, not an industry standard.
-  Initial parameter values (10% tolerance, 40% DTI, COP 50M review threshold, ...) are fictional.
+  Initial parameter values (10% tolerance, 40% DTI, $25,000 review threshold, ...) are fictional.
+
+---
+
+## D-014 — US locale: names, addresses, USD and US document formats
+
+- **Date:** 2026-10-14
+- **Decision:** Synthetic applicants, addresses (street, city, state, ZIP), phone formats and currency
+  (USD) follow US conventions. The policy is a US consumer-lending policy: loan limits $1,000-$50,000,
+  mandatory review above $25,000, 1.00% monthly interest (about 12.7% effective annual).
+  Supersedes the Colombian locale of D-004. Code identifiers keep the names from the project spec
+  (`payslip`, `STALE_PAYSLIP`); policy prose says "payslips (pay stubs)".
+- **Alternatives:** Colombian data and COP (original plan).
+- **Why:** The project targets a US audience. US documents are also the format Textract handles best,
+  and Bedrock Guardrails' built-in PII entity types are US-oriented (to be confirmed when the guardrail
+  is configured).
+- **Trade-off:** Less faithful to the original Colombian client. The generator still includes names with
+  diacritics (e.g. José, Zoë) so the "accents are not a defect" hard negative remains meaningful.
+- **Identity number:** the identity document is a state driver license / state ID, with a fictional ID
+  number format. Social Security Numbers are deliberately NOT generated: even synthetic SSNs can collide
+  with real people's, which is unacceptable in a public repo.

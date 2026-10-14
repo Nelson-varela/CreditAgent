@@ -9,19 +9,19 @@
 policy_version: "1.0.0"
 title: "Consumer Credit Risk Policy"
 effective_date: 2026-01-01
-currency: COP
+currency: USD
 
 parameters:
   # Loan pricing
-  monthly_interest_rate: 0.0175        # 1.75% monthly, used to compute the installment
+  monthly_interest_rate: 0.01           # 1.00% monthly (about 12.7% effective annual), used to compute the installment
   # Income and affordability
   income_tolerance: 0.10               # max relative difference, declared vs documented income
   max_dti: 0.40                        # max debt-to-income ratio
   min_employment_months: 6
   # Amounts and terms
-  min_amount_cop: 1000000
-  max_amount_cop: 100000000
-  mandatory_review_amount_cop: 50000000
+  min_amount_usd: 1000
+  max_amount_usd: 50000
+  mandatory_review_amount_usd: 25000
   max_term_months: 60
   # Document freshness (measured against the assessment date, never "today")
   payslip_max_age_days: 60
@@ -42,7 +42,7 @@ sections:
         title: "Mandatory documents"
         text: >-
           Every application file must contain the signed application form, a government-issued
-          identity document (national ID card, cédula), an employment letter and one utility bill.
+          identity document (state driver license or state ID card), an employment letter and one utility bill.
           A file that lacks any of these documents cannot be assessed and must be flagged so that
           the missing document is requested from the applicant.
         defect_type: MISSING_DOC
@@ -51,7 +51,7 @@ sections:
       - rule_id: "R-1.2"
         title: "Payslips"
         text: >-
-          The file must contain the {required_payslips} most recent payslips, covering consecutive
+          The file must contain the {required_payslips} most recent payslips (pay stubs), covering consecutive
           pay periods. A smaller number of payslips does not satisfy the requirement.
         defect_type: MISSING_DOC
         severity: medium
@@ -111,8 +111,8 @@ sections:
         text: >-
           The following variations are not defects and must not be reported: upper or lower case;
           accents and diacritics; an omitted or abbreviated middle name; the order "surname, given
-          name"; and the usual street abbreviations ("Cra" for "Carrera", "Cll" for "Calle", "Av"
-          for "Avenida", "No." or "#" before the house number).
+          name"; and the usual street abbreviations ("St" for "Street", "Ave" for "Avenue", "Blvd" for
+          "Boulevard", "Apt" or "#" before the unit number).
 
   - section_id: "3"
     title: "Income verification"
@@ -218,12 +218,12 @@ sections:
       - rule_id: "R-6.1"
         title: "Mandatory human review"
         text: >-
-          Applications for more than COP {mandatory_review_amount_cop:,} require mandatory human
+          Applications for more than ${mandatory_review_amount_usd:,} require mandatory human
           review regardless of whether any finding was detected.
       - rule_id: "R-6.2"
         title: "Product limits"
         text: >-
-          The requested amount must be between COP {min_amount_cop:,} and COP {max_amount_cop:,},
+          The requested amount must be between ${min_amount_usd:,} and ${max_amount_usd:,},
           and the requested term must not exceed {max_term_months} months.
         defect_type: POLICY_VIOLATION
         severity: high

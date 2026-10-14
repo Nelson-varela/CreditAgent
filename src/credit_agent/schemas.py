@@ -187,7 +187,7 @@ class Application(StrictModel):
     application_id: str
     owner_id: str
     applicant_name: str
-    amount_cop: int = Field(gt=0)
+    amount_usd: int = Field(gt=0)
     term_months: int = Field(gt=0)
     status: ApplicationStatus
     received_at: AwareDatetime

@@ -28,9 +28,9 @@ class PolicyParameters(StrictModel):
     income_tolerance: float = Field(gt=0, lt=1)
     max_dti: float = Field(gt=0, lt=1)
     min_employment_months: int = Field(ge=0)
-    min_amount_cop: int = Field(gt=0)
-    max_amount_cop: int = Field(gt=0)
-    mandatory_review_amount_cop: int = Field(gt=0)
+    min_amount_usd: int = Field(gt=0)
+    max_amount_usd: int = Field(gt=0)
+    mandatory_review_amount_usd: int = Field(gt=0)
     max_term_months: int = Field(gt=0)
     payslip_max_age_days: int = Field(gt=0)
     utility_bill_max_age_days: int = Field(gt=0)
@@ -40,10 +40,10 @@ class PolicyParameters(StrictModel):
 
     @model_validator(mode="after")
     def _amounts_are_coherent(self) -> PolicyParameters:
-        if self.min_amount_cop >= self.max_amount_cop:
-            raise ValueError("min_amount_cop must be below max_amount_cop")
-        if self.mandatory_review_amount_cop > self.max_amount_cop:
-            raise ValueError("mandatory_review_amount_cop cannot exceed max_amount_cop")
+        if self.min_amount_usd >= self.max_amount_usd:
+            raise ValueError("min_amount_usd must be below max_amount_usd")
+        if self.mandatory_review_amount_usd > self.max_amount_usd:
+            raise ValueError("mandatory_review_amount_usd cannot exceed max_amount_usd")
         return self
 
 
