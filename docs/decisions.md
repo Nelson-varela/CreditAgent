@@ -87,3 +87,38 @@ This is the study material for defending the architecture in interviews.
 - **Why:** Reproducible metrics require reproducible environments, and heavy libraries
   (e.g. `sentence-transformers`) should not be pinned before we know we use them.
 - **Trade-off:** Each new day may need a lockfile update.
+
+---
+
+## D-009 — Schemas are strict; invariants live in the models, not in prompts
+
+- **Date:** 2026-10-14
+- **Decision:** Every Pydantic model uses `extra="forbid"`. Business invariants are enforced at
+  construction time: a `Finding` must carry evidence or a `policy_rule_id`; a `CONFIRMED` proposal must
+  record `confirmed_by` (and only those); datetimes must be timezone-aware; `AuditEvent` is frozen.
+- **Alternatives:** lenient models that drop unknown fields; checking invariants in the pipeline.
+- **Why:** The same models validate structured LLM output. A model that invents a field must fail
+  loudly, not be silently accepted. Putting invariants in the type makes principle 5 ("every claim
+  carries verifiable evidence") impossible to bypass by accident.
+- **Trade-off:** Stricter parsing means more rejected LLM outputs (counted in the error rate) instead of
+  silently degraded ones. `AuditEvent.trace_id` is optional (batch jobs may have none).
+
+## D-010 — Application lifecycle is a transition table, with "agent never decides" in code
+
+- **Date:** 2026-10-14
+- **Decision:** `ALLOWED_TRANSITIONS` encodes the lifecycle; `can_transition(..., by_human=)` refuses
+  any move into `approved` / `rejected` / `documents_requested` unless a human triggered it.
+- **Alternatives:** a state-machine library; checking statuses ad hoc in each endpoint.
+- **Why:** One tiny, exhaustively testable table is easy to defend and cannot drift between the API,
+  the MCP tools and the pipeline. Tests assert that no non-human path reaches a decision state.
+- **Trade-off:** No transition side effects or history here; the audit log records them.
+
+## D-011 — Prices are empty by default and a missing price raises
+
+- **Date:** 2026-10-14
+- **Decision:** `model_prices`, `textract_price_per_page_usd` and `pricing_checked_on` start empty.
+  `Settings.model_price()` raises `KeyError` for an unknown model.
+- **Alternatives:** hard-coded prices from memory; defaulting unknown models to zero cost.
+- **Why:** Prices must come from the official pages with a consultation date; a silent zero would make
+  the reported cost-per-file look better than reality.
+- **Trade-off:** Cost tracking cannot run until day 2 fills the table.

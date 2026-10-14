@@ -36,3 +36,7 @@ select = ["E", "F", "I", "UP", "B"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = ["aws: tests that call real AWS (not run in CI)"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
