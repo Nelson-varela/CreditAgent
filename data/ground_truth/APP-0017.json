@@ -1,0 +1,267 @@
+{
+  "application": {
+    "application_id": "APP-0017",
+    "owner_id": "analyst_1",
+    "applicant_name": "Catherine Valerie Reese",
+    "amount_usd": 20600,
+    "term_months": 60,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0017/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0017/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0017/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0017/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0017/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0017/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0017/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0017/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0017/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Catherine Valerie Reese",
+        "id_number": "D12880001",
+        "date_of_birth": "01/18/1996",
+        "address": "2920 Lakeview Lane, Phoenix, AZ 85053",
+        "declared_monthly_income": "$3,652.45",
+        "requested_amount": "$20,600.00",
+        "term_months": "60",
+        "loan_purpose": "Home improvement",
+        "application_date": "06/29/2026"
+      },
+      "canonical": {
+        "full_name": "catherine valerie reese",
+        "id_number": "D12880001",
+        "date_of_birth": "1996-01-18",
+        "address": "2920 lakeview lane phoenix az 85053",
+        "declared_monthly_income": "3652.45",
+        "requested_amount": "20600.00",
+        "term_months": "60"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "CATHERINE VALERIE REESE",
+        "id_number": "D12880001",
+        "date_of_birth": "01/18/1996",
+        "issue_date": "07/14/2022",
+        "expiry_date": "07/14/2030"
+      },
+      "canonical": {
+        "full_name": "catherine valerie reese",
+        "id_number": "D12880001",
+        "date_of_birth": "1996-01-18",
+        "expiry_date": "2030-07-14"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Catherine Valerie Reese",
+        "employer": "Buchanan, Campos and Brewer",
+        "net_salary": "$3,337.70",
+        "pay_period_start": "04/14/2026",
+        "pay_period_end": "05/13/2026"
+      },
+      "canonical": {
+        "full_name": "catherine valerie reese",
+        "employer": "buchanan campos and brewer",
+        "net_salary": "3337.70",
+        "pay_period_start": "2026-04-14",
+        "pay_period_end": "2026-05-13"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Catherine Valerie Reese",
+        "employer": "Buchanan, Campos and Brewer",
+        "net_salary": "$3,337.70",
+        "pay_period_start": "05/14/2026",
+        "pay_period_end": "06/13/2026"
+      },
+      "canonical": {
+        "full_name": "catherine valerie reese",
+        "employer": "buchanan campos and brewer",
+        "net_salary": "3337.70",
+        "pay_period_start": "2026-05-14",
+        "pay_period_end": "2026-06-13"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "CATHERINE VALERIE REESE",
+        "employer": "Buchanan, Campos and Brewer",
+        "job_title": "Immigration officer",
+        "hire_date": "03/30/2018",
+        "monthly_salary": "$3,337.70",
+        "letter_date": "06/09/2026"
+      },
+      "canonical": {
+        "full_name": "catherine valerie reese",
+        "employer": "buchanan campos and brewer",
+        "job_title": "immigration officer",
+        "hire_date": "2018-03-30",
+        "monthly_salary": "3337.70"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "CATHERINE VALERIE REESE",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$3,337.70",
+        "existing_debt_payments": "$534.03",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "3097"
+      },
+      "canonical": {
+        "account_holder": "catherine valerie reese",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "3337.70",
+        "existing_debt_payments": "534.03"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "CATHERINE VALERIE REESE",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$3,337.70",
+        "existing_debt_payments": "$534.03",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "3097"
+      },
+      "canonical": {
+        "account_holder": "catherine valerie reese",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "3337.70",
+        "existing_debt_payments": "534.03"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "CATHERINE VALERIE REESE",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$3,337.70",
+        "existing_debt_payments": "$534.03",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "3097"
+      },
+      "canonical": {
+        "account_holder": "catherine valerie reese",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "3337.70",
+        "existing_debt_payments": "534.03"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Catherine Valerie Reese",
+        "service_address": "2920 Lakeview Lane, Phoenix, AZ 85053",
+        "bill_date": "05/13/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$83.44"
+      },
+      "canonical": {
+        "account_holder": "catherine valerie reese",
+        "service_address": "2920 lakeview lane phoenix az 85053",
+        "bill_date": "2026-05-13"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0017",
+    "owner_id": "analyst_1",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [],
+    "hard_negatives": [
+      {
+        "kind": "name_accents_case",
+        "doc_type": "employment_letter",
+        "field": "full_name",
+        "description": "name printed with upper case"
+      },
+      {
+        "kind": "income_just_under_tolerance",
+        "doc_type": "application_form",
+        "field": "declared_monthly_income",
+        "description": "differs by 9.43%"
+      }
+    ],
+    "requires_mandatory_review": false,
+    "expected_status": "clean"
+  }
+}

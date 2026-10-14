@@ -1,0 +1,275 @@
+{
+  "application": {
+    "application_id": "APP-0029",
+    "owner_id": "analyst_1",
+    "applicant_name": "Stephanie Dustin Gill",
+    "amount_usd": 21800,
+    "term_months": 48,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0029/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0029/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0029/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0029/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0029/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0029/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0029/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0029/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0029/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Stephanie Dustin Gill",
+        "id_number": "D97091427",
+        "date_of_birth": "09/18/1998",
+        "address": "6593 Sunset Court, Apt 1B, Charlotte, NC 28292",
+        "declared_monthly_income": "$8,412.10",
+        "requested_amount": "$21,800.00",
+        "term_months": "48",
+        "loan_purpose": "Vehicle repair",
+        "application_date": "06/26/2026"
+      },
+      "canonical": {
+        "full_name": "stephanie dustin gill",
+        "id_number": "D97091427",
+        "date_of_birth": "1998-09-18",
+        "address": "6593 sunset court unit 1b charlotte nc 28292",
+        "declared_monthly_income": "8412.10",
+        "requested_amount": "21800.00",
+        "term_months": "48"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "STEPHANIE DUSTIN GILL",
+        "id_number": "D97091427",
+        "date_of_birth": "09/18/1998",
+        "issue_date": "09/18/2023",
+        "expiry_date": "09/18/2031"
+      },
+      "canonical": {
+        "full_name": "stephanie dustin gill",
+        "id_number": "D97091427",
+        "date_of_birth": "1998-09-18",
+        "expiry_date": "2031-09-18"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Stephanie Dustin Gill",
+        "employer": "Reese Group",
+        "net_salary": "$8,412.10",
+        "pay_period_start": "04/14/2026",
+        "pay_period_end": "05/13/2026"
+      },
+      "canonical": {
+        "full_name": "stephanie dustin gill",
+        "employer": "reese group",
+        "net_salary": "8412.10",
+        "pay_period_start": "2026-04-14",
+        "pay_period_end": "2026-05-13"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Stephanie Dustin Gill",
+        "employer": "Reese Group",
+        "net_salary": "$8,412.10",
+        "pay_period_start": "05/14/2026",
+        "pay_period_end": "06/13/2026"
+      },
+      "canonical": {
+        "full_name": "stephanie dustin gill",
+        "employer": "reese group",
+        "net_salary": "8412.10",
+        "pay_period_start": "2026-05-14",
+        "pay_period_end": "2026-06-13"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Stephanie Dustin Gill",
+        "employer": "Reese Group",
+        "job_title": "Materials engineer",
+        "hire_date": "10/30/2017",
+        "monthly_salary": "$8,412.10",
+        "letter_date": "06/08/2026"
+      },
+      "canonical": {
+        "full_name": "stephanie dustin gill",
+        "employer": "reese group",
+        "job_title": "materials engineer",
+        "hire_date": "2017-10-30",
+        "monthly_salary": "8412.10"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "STEPHANIE DUSTIN GILL",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$8,412.10",
+        "existing_debt_payments": "$588.85",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "1036"
+      },
+      "canonical": {
+        "account_holder": "stephanie dustin gill",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "8412.10",
+        "existing_debt_payments": "588.85"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "STEPHANIE DUSTIN GILL",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$8,412.10",
+        "existing_debt_payments": "$588.85",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "1036"
+      },
+      "canonical": {
+        "account_holder": "stephanie dustin gill",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "8412.10",
+        "existing_debt_payments": "588.85"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "STEPHANIE DUSTIN GILL",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$8,412.10",
+        "existing_debt_payments": "$588.85",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "1036"
+      },
+      "canonical": {
+        "account_holder": "stephanie dustin gill",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "8412.10",
+        "existing_debt_payments": "588.85"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Stephanie Dustin Gill",
+        "service_address": "6593 Sunset Ct #1B, Charlotte, NC 28292",
+        "bill_date": "03/30/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$210.30"
+      },
+      "canonical": {
+        "account_holder": "stephanie dustin gill",
+        "service_address": "6593 sunset court unit 1b charlotte nc 28292",
+        "bill_date": "2026-03-30"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0029",
+    "owner_id": "analyst_1",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [
+      {
+        "defect_type": "EXPIRED_DOC",
+        "rule_ids": [
+          "R-4.2"
+        ],
+        "doc_types": [
+          "utility_bill"
+        ],
+        "field": "bill_date",
+        "description": "utility bill is 92 days old (limit 90)",
+        "near_threshold": true,
+        "details": {}
+      }
+    ],
+    "hard_negatives": [
+      {
+        "kind": "address_abbreviated",
+        "doc_type": "utility_bill",
+        "field": "service_address",
+        "description": "address in abbreviated_hash format"
+      }
+    ],
+    "requires_mandatory_review": false,
+    "expected_status": "needs_review"
+  }
+}

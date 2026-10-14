@@ -1,0 +1,267 @@
+{
+  "application": {
+    "application_id": "APP-0015",
+    "owner_id": "analyst_2",
+    "applicant_name": "Deanna Ashley Blair",
+    "amount_usd": 22300,
+    "term_months": 24,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0015/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0015/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0015/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0015/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0015/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0015/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0015/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0015/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0015/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Deanna Ashley Blair",
+        "id_number": "D69182124",
+        "date_of_birth": "02/19/1969",
+        "address": "883 Maple Street, Charlotte, NC 28236",
+        "declared_monthly_income": "$5,156.48",
+        "requested_amount": "$22,300.00",
+        "term_months": "24",
+        "loan_purpose": "Medical expenses",
+        "application_date": "06/27/2026"
+      },
+      "canonical": {
+        "full_name": "deanna ashley blair",
+        "id_number": "D69182124",
+        "date_of_birth": "1969-02-19",
+        "address": "883 maple street charlotte nc 28236",
+        "declared_monthly_income": "5156.48",
+        "requested_amount": "22300.00",
+        "term_months": "24"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "DEANNA ASHLEY BLAIR",
+        "id_number": "D69182124",
+        "date_of_birth": "02/19/1969",
+        "issue_date": "09/29/2019",
+        "expiry_date": "09/29/2027"
+      },
+      "canonical": {
+        "full_name": "deanna ashley blair",
+        "id_number": "D69182124",
+        "date_of_birth": "1969-02-19",
+        "expiry_date": "2027-09-29"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Deanna Ashley Blair",
+        "employer": "Whitney, Gordon and Jackson",
+        "net_salary": "$5,156.48",
+        "pay_period_start": "04/02/2026",
+        "pay_period_end": "05/01/2026"
+      },
+      "canonical": {
+        "full_name": "deanna ashley blair",
+        "employer": "whitney gordon and jackson",
+        "net_salary": "5156.48",
+        "pay_period_start": "2026-04-02",
+        "pay_period_end": "2026-05-01"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Deanna Ashley Blair",
+        "employer": "Whitney, Gordon and Jackson",
+        "net_salary": "$5,156.48",
+        "pay_period_start": "05/02/2026",
+        "pay_period_end": "06/01/2026"
+      },
+      "canonical": {
+        "full_name": "deanna ashley blair",
+        "employer": "whitney gordon and jackson",
+        "net_salary": "5156.48",
+        "pay_period_start": "2026-05-02",
+        "pay_period_end": "2026-06-01"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Deanna Ashley Blair",
+        "employer": "Whitney, Gordon and Jackson",
+        "job_title": "Public house manager",
+        "hire_date": "11/30/2018",
+        "monthly_salary": "$5,156.48",
+        "letter_date": "06/05/2026"
+      },
+      "canonical": {
+        "full_name": "deanna ashley blair",
+        "employer": "whitney gordon and jackson",
+        "job_title": "public house manager",
+        "hire_date": "2018-11-30",
+        "monthly_salary": "5156.48"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "BLAIR, DEANNA ASHLEY",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$5,156.48",
+        "existing_debt_payments": "$412.52",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "0819"
+      },
+      "canonical": {
+        "account_holder": "deanna ashley blair",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "5156.48",
+        "existing_debt_payments": "412.52"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "DEANNA ASHLEY BLAIR",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$5,156.48",
+        "existing_debt_payments": "$412.52",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "0819"
+      },
+      "canonical": {
+        "account_holder": "deanna ashley blair",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "5156.48",
+        "existing_debt_payments": "412.52"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "DEANNA ASHLEY BLAIR",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$5,156.48",
+        "existing_debt_payments": "$412.52",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "0819"
+      },
+      "canonical": {
+        "account_holder": "deanna ashley blair",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "5156.48",
+        "existing_debt_payments": "412.52"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Deanna Ashley Blair",
+        "service_address": "883 Maple Street, Charlotte, NC 28236",
+        "bill_date": "06/03/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$128.91"
+      },
+      "canonical": {
+        "account_holder": "deanna ashley blair",
+        "service_address": "883 maple street charlotte nc 28236",
+        "bill_date": "2026-06-03"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0015",
+    "owner_id": "analyst_2",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [],
+    "hard_negatives": [
+      {
+        "kind": "payslip_age_at_limit",
+        "doc_type": "payslip",
+        "field": "pay_period_end",
+        "description": "oldest payslip is exactly 60 days old"
+      },
+      {
+        "kind": "name_last_first",
+        "doc_type": "bank_statement",
+        "field": "account_holder",
+        "description": "'Surname, Given' order"
+      }
+    ],
+    "requires_mandatory_review": false,
+    "expected_status": "clean"
+  }
+}

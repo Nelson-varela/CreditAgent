@@ -1,0 +1,261 @@
+{
+  "application": {
+    "application_id": "APP-0028",
+    "owner_id": "analyst_2",
+    "applicant_name": "Chloé Anne Tremblay",
+    "amount_usd": 19100,
+    "term_months": 48,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0028/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0028/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0028/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0028/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0028/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0028/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0028/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0028/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0028/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Chloé Anne Tremblay",
+        "id_number": "D41237565",
+        "date_of_birth": "12/06/1981",
+        "address": "9191 Elm Drive, Madison, WI 53799",
+        "declared_monthly_income": "$2,873.31",
+        "requested_amount": "$19,100.00",
+        "term_months": "48",
+        "loan_purpose": "Education costs",
+        "application_date": "06/27/2026"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "id_number": "D41237565",
+        "date_of_birth": "1981-12-06",
+        "address": "9191 elm drive madison wi 53799",
+        "declared_monthly_income": "2873.31",
+        "requested_amount": "19100.00",
+        "term_months": "48"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "CHLOÉ ANNE TREMBLAY",
+        "id_number": "D41237565",
+        "date_of_birth": "12/06/1981",
+        "issue_date": "12/26/2019",
+        "expiry_date": "12/26/2027"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "id_number": "D41237565",
+        "date_of_birth": "1981-12-06",
+        "expiry_date": "2027-12-26"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Chloé Anne Tremblay",
+        "employer": "Lozano, Hunter and Salazar",
+        "net_salary": "$2,873.31",
+        "pay_period_start": "04/15/2026",
+        "pay_period_end": "05/14/2026"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "employer": "lozano hunter and salazar",
+        "net_salary": "2873.31",
+        "pay_period_start": "2026-04-15",
+        "pay_period_end": "2026-05-14"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Chloé Anne Tremblay",
+        "employer": "Lozano, Hunter and Salazar",
+        "net_salary": "$2,873.31",
+        "pay_period_start": "05/15/2026",
+        "pay_period_end": "06/14/2026"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "employer": "lozano hunter and salazar",
+        "net_salary": "2873.31",
+        "pay_period_start": "2026-05-15",
+        "pay_period_end": "2026-06-14"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Chloé Anne Tremblay",
+        "employer": "Lozano, Hunter and Salazar",
+        "job_title": "Hospital doctor",
+        "hire_date": "04/30/2018",
+        "monthly_salary": "$2,873.31",
+        "letter_date": "05/31/2026"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "employer": "lozano hunter and salazar",
+        "job_title": "hospital doctor",
+        "hire_date": "2018-04-30",
+        "monthly_salary": "2873.31"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "CHLOÉ ANNE TREMBLAY",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$2,873.31",
+        "existing_debt_payments": "$172.40",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "2850"
+      },
+      "canonical": {
+        "account_holder": "chloe anne tremblay",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "2873.31",
+        "existing_debt_payments": "172.40"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "CHLOÉ ANNE TREMBLAY",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$2,873.31",
+        "existing_debt_payments": "$172.40",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "2850"
+      },
+      "canonical": {
+        "account_holder": "chloe anne tremblay",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "2873.31",
+        "existing_debt_payments": "172.40"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "CHLOÉ ANNE TREMBLAY",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$2,873.31",
+        "existing_debt_payments": "$172.40",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "2850"
+      },
+      "canonical": {
+        "account_holder": "chloe anne tremblay",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "2873.31",
+        "existing_debt_payments": "172.40"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Chloé Anne Tremblay",
+        "service_address": "9191 Elm Drive, Madison, WI 53799",
+        "bill_date": "04/01/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$71.83"
+      },
+      "canonical": {
+        "account_holder": "chloe anne tremblay",
+        "service_address": "9191 elm drive madison wi 53799",
+        "bill_date": "2026-04-01"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0028",
+    "owner_id": "analyst_2",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [],
+    "hard_negatives": [
+      {
+        "kind": "utility_bill_age_at_limit",
+        "doc_type": "utility_bill",
+        "field": "bill_date",
+        "description": "bill is exactly 90 days old"
+      }
+    ],
+    "requires_mandatory_review": false,
+    "expected_status": "clean"
+  }
+}

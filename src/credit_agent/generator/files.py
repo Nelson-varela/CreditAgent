@@ -8,7 +8,14 @@ from decimal import Decimal
 
 from faker import Faker
 
-from credit_agent.generator.models import DocumentContent, GeneratedFile, GroundTruth, Split
+from credit_agent.generator.models import (
+    DefectLabel,
+    DocumentContent,
+    GeneratedFile,
+    GroundTruth,
+    HardNegativeLabel,
+    Split,
+)
 from credit_agent.generator.persona import Persona, add_months, build_persona
 from credit_agent.normalize import (
     normalize_address,
@@ -19,7 +26,7 @@ from credit_agent.normalize import (
 from credit_agent.policy import Policy
 from credit_agent.schemas import Application, ApplicationStatus, DocType, DocumentRef
 
-_FAKE = Faker("en_US")
+FAKE = Faker("en_US")
 
 
 def file_rng(seed: int, index: int) -> random.Random:
@@ -193,6 +200,50 @@ def _period_start(period_end: date) -> date:
     return add_months(period_end, -1) + timedelta(days=1)
 
 
+def assemble(
+    *,
+    persona: Persona,
+    documents: list[DocumentContent],
+    application_id: str,
+    owner_id: str,
+    split: Split,
+    seed: int,
+    policy: Policy,
+    as_of: date,
+    defects: list[DefectLabel],
+    hard_negatives: list[HardNegativeLabel],
+) -> GeneratedFile:
+    """Wrap documents into an application plus ground truth, derived from the FINAL documents."""
+    form = next(d for d in documents if d.doc_type is DocType.APPLICATION_FORM)
+    amount = int(Decimal(form.canonical["requested_amount"]))
+    needs_review = amount > policy.parameters.mandatory_review_amount_usd
+    application = Application(
+        application_id=application_id,
+        owner_id=owner_id,
+        applicant_name=persona.full_name,
+        amount_usd=amount,
+        term_months=int(form.canonical["term_months"]),
+        status=ApplicationStatus.RECEIVED,
+        received_at=datetime(as_of.year, as_of.month, as_of.day, 12, 0, tzinfo=UTC),
+        documents=[document_ref(application_id, d) for d in documents],
+    )
+    truth = GroundTruth(
+        application_id=application_id,
+        owner_id=owner_id,
+        split=split,
+        seed=seed,
+        policy_version=policy.policy_version,
+        as_of_date=as_of,
+        defects=defects,
+        hard_negatives=hard_negatives,
+        requires_mandatory_review=needs_review,
+        expected_status=(
+            ApplicationStatus.NEEDS_REVIEW if defects or needs_review else ApplicationStatus.CLEAN
+        ),
+    )
+    return GeneratedFile(application=application, documents=documents, ground_truth=truth)
+
+
 def build_clean_file(
     *,
     seed: int,
@@ -205,32 +256,17 @@ def build_clean_file(
 ) -> GeneratedFile:
     """A file with no defects. High amounts still require human review (rule R-6.1)."""
     rng = file_rng(seed, index)
-    _FAKE.seed_instance(rng.randrange(2**32))
-    persona = build_persona(rng, _FAKE, policy, as_of, high_amount=high_amount)
-    documents = build_documents(persona)
-
-    application_id = f"APP-{index:04d}"
-    needs_review = persona.requested_amount > policy.parameters.mandatory_review_amount_usd
-    application = Application(
-        application_id=application_id,
-        owner_id=owner_id,
-        applicant_name=persona.full_name,
-        amount_usd=persona.requested_amount,
-        term_months=persona.term_months,
-        status=ApplicationStatus.RECEIVED,
-        received_at=datetime(as_of.year, as_of.month, as_of.day, 12, 0, tzinfo=UTC),
-        documents=[document_ref(application_id, d) for d in documents],
-    )
-    truth = GroundTruth(
-        application_id=application_id,
+    FAKE.seed_instance(rng.randrange(2**32))
+    persona = build_persona(rng, FAKE, policy, as_of, high_amount=high_amount)
+    return assemble(
+        persona=persona,
+        documents=build_documents(persona),
+        application_id=f"APP-{index:04d}",
         owner_id=owner_id,
         split=split,
         seed=seed,
-        policy_version=policy.policy_version,
-        as_of_date=as_of,
-        requires_mandatory_review=needs_review,
-        expected_status=(
-            ApplicationStatus.NEEDS_REVIEW if needs_review else ApplicationStatus.CLEAN
-        ),
+        policy=policy,
+        as_of=as_of,
+        defects=[],
+        hard_negatives=[],
     )
-    return GeneratedFile(application=application, documents=documents, ground_truth=truth)

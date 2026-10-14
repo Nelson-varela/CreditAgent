@@ -65,7 +65,7 @@ This is the study material for defending the architecture in interviews.
 - **Decision:** `credit-file-agent` for the GitHub repo and Python package.
 - **Alternatives:** keep the local folder name (`scotiabank-ops`).
 - **Why:** A public repo named after a real bank suggests an affiliation that does not exist; the
-  original client was a startup.
+  original client was a US startup.
 - **Trade-off:** The local folder still has the old name because it is open in the editor; renaming it
   is cosmetic and does not affect the repo.
 
@@ -168,10 +168,10 @@ This is the study material for defending the architecture in interviews.
   Supersedes the Colombian locale of D-004. Code identifiers keep the names from the project spec
   (`payslip`, `STALE_PAYSLIP`); policy prose says "payslips (pay stubs)".
 - **Alternatives:** Colombian data and COP (original plan).
-- **Why:** The project targets a US audience. US documents are also the format Textract handles best,
+- **Why:** The original client operated in the US market, so US data mirrors the real deployment. The audience is also US-based. US documents are also the format Textract handles best,
   and Bedrock Guardrails' built-in PII entity types are US-oriented (to be confirmed when the guardrail
   is configured).
-- **Trade-off:** Less faithful to the original Colombian client. The generator still includes names with
+- **Trade-off:** Nothing is lost with respect to the original deployment (US client). The generator includes names with
   diacritics (e.g. José, Zoë) so the "accents are not a defect" hard negative remains meaningful.
 - **Identity number:** the identity document is a state driver license / state ID, with a fictional ID
   number format. Social Security Numbers are deliberately NOT generated: even synthetic SSNs can collide
@@ -184,9 +184,11 @@ This is the study material for defending the architecture in interviews.
 - **Date:** 2026-10-14
 - **Decision:** Every file derives its own RNG (and re-seeds Faker) from `(seed, index)`.
 - **Alternatives:** a single RNG stream consumed in order.
-- **Why:** Reproducibility must survive changing `--n`: file 7 is identical whether 10 or 40 files are
-  generated, and adding a defect type later does not reshuffle unrelated files. The dev/test split and
-  published metrics therefore stay stable.
+- **Why:** A file's persona (names, amounts, dates) depends only on `(seed, index)`, so it does not
+  change when other files are added or removed, and adding a new injector does not reshuffle the
+  random stream of unrelated files. Note the limit: WHICH defects a file receives comes from the
+  batch plan, which depends on `(seed, n)` by design because the target mix (30/50/20, owner 60/40,
+  dev/test) is defined over the whole batch. Published metrics therefore pin `--n 40 --seed 42`.
 - **Trade-off:** Output depends on pinned Faker and Python `random` behaviour; a Faker upgrade changes the
   data, which is why versions are pinned (D-008) and the ground truth JSON is versioned.
 
@@ -215,3 +217,56 @@ This is the study material for defending the architecture in interviews.
   generator bug would otherwise surface as a fake system error.
 - **Trade-off:** The independent check duplicates policy logic in tests; on day 3 the real rule
   engine must also report zero findings on clean files, which cross-checks both.
+
+---
+
+## D-018 — Ground truth is verified by an independent oracle, not trusted
+
+- **Date:** 2026-10-14
+- **Decision:** `tests/test_generator_batch.py` re-evaluates every policy rule from the canonical
+  values of each generated file and requires the set of violated rules to EQUAL the union of the
+  `rule_ids` in the labels (hard negatives included, since a legitimate variation that the oracle
+  flags would show up as an extra rule). Run on several seeds and reference dates, plus a stress run
+  of 100 seeds x 2 dates (8,000 files).
+- **Alternatives:** trust the generator's intent; validate only once the real rule engine exists.
+- **Why:** The oracle found two real label bugs before any model ran: (1) when the employment letter
+  is the altered document, the tolerance must be measured against the NEW letter value (the documented
+  amount), not the original salary (an 11.1% change was only 10.0% of the new value, i.e. accepted);
+  (2) month-end clamping made a "tenure just under the minimum" case equal to the reference date, not
+  after it. Without the oracle these would have been charged to the system as errors.
+- **Trade-off:** The oracle duplicates policy logic in test code. On day 3 the real rule engine must also
+  agree with the labels, which cross-checks both implementations.
+
+## D-019 — Coverage of hard cases is assigned by the plan, not left to chance
+
+- **Date:** 2026-10-14
+- **Decision:** Injection placement/language rotates over injection files
+  (field/footer x English/foreign language), and each hard-negative kind is assigned round-robin.
+  If a variation does not fit a file (for example the bill is missing), another kind is tried.
+- **Alternatives:** sample placements randomly.
+- **Why:** With 5 injection files, random placement left every case in the footer for seed 42 (a test
+  caught it). A suite whose difficulty depends on luck is not defensible.
+- **Trade-off:** Less random-looking data; exact coverage guarantees only hold for batches of at least
+  4 injection files (n >= 32 with the default quota).
+
+## D-020 — Defect ordering and dependency tracking
+
+- **Date:** 2026-10-14
+- **Decision:** Defects are applied in a fixed order; each records the fields it modified (`touched`) and
+  the documents its detection depends on (`required`). `MISSING_DOC` runs last and only removes a
+  document that is neither touched nor required; variations run after it and skip anything touched.
+- **Alternatives:** independent random mutations; retrying until labels are consistent.
+- **Why:** Mutations interact (removing the ID document would make an ID mismatch undetectable). Tracking
+  dependencies makes every label true by construction instead of fixing contradictions afterwards.
+- **Trade-off:** Files are somewhat less "wild": a document with one defect is not also randomly broken
+  by an unrelated one.
+
+## D-021 — Known limitation: per-type sample sizes are tiny
+
+- **Date:** 2026-10-14
+- **Decision:** Report it plainly. With `--n 40`, some defect types appear only twice in total
+  (e.g. `NAME_MISMATCH`, `POLICY_VIOLATION`), so their dev/test counts are about 0-2.
+- **Why it matters:** per-type recall will have very wide bootstrap intervals; the aggregate metric
+  is the headline, as the project spec already states.
+- **Option if time allows:** a larger batch (`--n 80`) for the final eval, with the cost implications
+  of extraction checked first.

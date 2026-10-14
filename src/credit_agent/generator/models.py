@@ -39,6 +39,7 @@ class DefectLabel(StrictModel):
     field: str | None = None
     description: str
     near_threshold: bool = False
+    details: dict[str, str] = Field(default_factory=dict)
 
 
 class HardNegativeLabel(StrictModel):

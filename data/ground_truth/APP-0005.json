@@ -1,0 +1,242 @@
+{
+  "application": {
+    "application_id": "APP-0005",
+    "owner_id": "analyst_2",
+    "applicant_name": "Aimée Rose Lefèvre",
+    "amount_usd": 5900,
+    "term_months": 48,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0005/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0005/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0005/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0005/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0005/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0005/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0005/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0005/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Aimée Rose Lefèvre",
+        "id_number": "D96553715",
+        "date_of_birth": "09/07/1998",
+        "address": "290 Oak Court, Apt 2C, Springfield, IL 62772",
+        "declared_monthly_income": "$6,588.44",
+        "requested_amount": "$5,900.00",
+        "term_months": "48",
+        "loan_purpose": "Medical expenses",
+        "application_date": "06/29/2026"
+      },
+      "canonical": {
+        "full_name": "aimee rose lefevre",
+        "id_number": "D96553715",
+        "date_of_birth": "1998-09-07",
+        "address": "290 oak court unit 2c springfield il 62772",
+        "declared_monthly_income": "6588.44",
+        "requested_amount": "5900.00",
+        "term_months": "48"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "AIMÉE ROSE LEFÈVRE",
+        "id_number": "D96553715",
+        "date_of_birth": "09/07/1998",
+        "issue_date": "05/16/2019",
+        "expiry_date": "05/16/2027"
+      },
+      "canonical": {
+        "full_name": "aimee rose lefevre",
+        "id_number": "D96553715",
+        "date_of_birth": "1998-09-07",
+        "expiry_date": "2027-05-16"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Aimée Rose Lefèvre",
+        "employer": "Williams-Marsh",
+        "net_salary": "$6,588.44",
+        "pay_period_start": "04/08/2026",
+        "pay_period_end": "05/07/2026"
+      },
+      "canonical": {
+        "full_name": "aimee rose lefevre",
+        "employer": "williams marsh",
+        "net_salary": "6588.44",
+        "pay_period_start": "2026-04-08",
+        "pay_period_end": "2026-05-07"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Aimée Rose Lefèvre",
+        "employer": "Williams-Marsh",
+        "net_salary": "$6,588.44",
+        "pay_period_start": "05/08/2026",
+        "pay_period_end": "06/07/2026"
+      },
+      "canonical": {
+        "full_name": "aimee rose lefevre",
+        "employer": "williams marsh",
+        "net_salary": "6588.44",
+        "pay_period_start": "2026-05-08",
+        "pay_period_end": "2026-06-07"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Aimée Rose Lefèvre",
+        "employer": "Williams-Marsh",
+        "job_title": "Media planner",
+        "hire_date": "08/30/2019",
+        "monthly_salary": "$6,588.44",
+        "letter_date": "06/13/2026"
+      },
+      "canonical": {
+        "full_name": "aimee rose lefevre",
+        "employer": "williams marsh",
+        "job_title": "media planner",
+        "hire_date": "2019-08-30",
+        "monthly_salary": "6588.44"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "AIMÉE ROSE LEFÈVRE",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$6,588.44",
+        "existing_debt_payments": "$1,185.92",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "9925"
+      },
+      "canonical": {
+        "account_holder": "aimee rose lefevre",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "6588.44",
+        "existing_debt_payments": "1185.92"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "AIMÉE ROSE LEFÈVRE",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$6,588.44",
+        "existing_debt_payments": "$1,185.92",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "9925"
+      },
+      "canonical": {
+        "account_holder": "aimee rose lefevre",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "6588.44",
+        "existing_debt_payments": "1185.92"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Aimée Rose Lefèvre",
+        "service_address": "290 Oak Court, Apt 2C, Springfield, IL 62772",
+        "bill_date": "06/21/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$164.71"
+      },
+      "canonical": {
+        "account_holder": "aimee rose lefevre",
+        "service_address": "290 oak court unit 2c springfield il 62772",
+        "bill_date": "2026-06-21"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0005",
+    "owner_id": "analyst_2",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [
+      {
+        "defect_type": "MISSING_DOC",
+        "rule_ids": [
+          "R-1.3"
+        ],
+        "doc_types": [
+          "bank_statement"
+        ],
+        "field": null,
+        "description": "bank_statement #3 is missing from the file",
+        "near_threshold": false,
+        "details": {}
+      }
+    ],
+    "hard_negatives": [],
+    "requires_mandatory_review": false,
+    "expected_status": "needs_review"
+  }
+}

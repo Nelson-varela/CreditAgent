@@ -1,0 +1,254 @@
+{
+  "application": {
+    "application_id": "APP-0011",
+    "owner_id": "analyst_2",
+    "applicant_name": "Zoë Marie Brennan",
+    "amount_usd": 19200,
+    "term_months": 36,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0011/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0011/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0011/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0011/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0011/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0011/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0011/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0011/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0011/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Zoë Marie Brennan",
+        "id_number": "D78915729",
+        "date_of_birth": "02/11/1992",
+        "address": "7505 Lakeview Lane, Tampa, FL 33637",
+        "declared_monthly_income": "$8,819.71",
+        "requested_amount": "$19,200.00",
+        "term_months": "36",
+        "loan_purpose": "Education costs",
+        "application_date": "06/26/2026"
+      },
+      "canonical": {
+        "full_name": "zoe marie brennan",
+        "id_number": "D78915729",
+        "date_of_birth": "1992-02-11",
+        "address": "7505 lakeview lane tampa fl 33637",
+        "declared_monthly_income": "8819.71",
+        "requested_amount": "19200.00",
+        "term_months": "36"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "ZOË MARIE BRENNAN",
+        "id_number": "D78915729",
+        "date_of_birth": "02/11/1992",
+        "issue_date": "04/14/2019",
+        "expiry_date": "04/14/2027"
+      },
+      "canonical": {
+        "full_name": "zoe marie brennan",
+        "id_number": "D78915729",
+        "date_of_birth": "1992-02-11",
+        "expiry_date": "2027-04-14"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Zoë Marie Brennan",
+        "employer": "Bell-Lopez",
+        "net_salary": "$8,819.71",
+        "pay_period_start": "04/23/2026",
+        "pay_period_end": "05/22/2026"
+      },
+      "canonical": {
+        "full_name": "zoe marie brennan",
+        "employer": "bell lopez",
+        "net_salary": "8819.71",
+        "pay_period_start": "2026-04-23",
+        "pay_period_end": "2026-05-22"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Zoë Marie Brennan",
+        "employer": "Bell-Lopez",
+        "net_salary": "$8,819.71",
+        "pay_period_start": "05/23/2026",
+        "pay_period_end": "06/22/2026"
+      },
+      "canonical": {
+        "full_name": "zoe marie brennan",
+        "employer": "bell lopez",
+        "net_salary": "8819.71",
+        "pay_period_start": "2026-05-23",
+        "pay_period_end": "2026-06-22"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Zoë Marie Brennan",
+        "employer": "Bell-Lopez",
+        "job_title": "Comptroller",
+        "hire_date": "06/30/2023",
+        "monthly_salary": "$8,819.71",
+        "letter_date": "06/09/2026"
+      },
+      "canonical": {
+        "full_name": "zoe marie brennan",
+        "employer": "bell lopez",
+        "job_title": "comptroller",
+        "hire_date": "2023-06-30",
+        "monthly_salary": "8819.71"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "ZOË MARIE BRENNAN",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$8,819.71",
+        "existing_debt_payments": "$1,234.76",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "0204"
+      },
+      "canonical": {
+        "account_holder": "zoe marie brennan",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "8819.71",
+        "existing_debt_payments": "1234.76"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "ZOË MARIE BRENNAN",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$8,819.71",
+        "existing_debt_payments": "$1,234.76",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "0204"
+      },
+      "canonical": {
+        "account_holder": "zoe marie brennan",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "8819.71",
+        "existing_debt_payments": "1234.76"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "ZOË MARIE BRENNAN",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$8,819.71",
+        "existing_debt_payments": "$1,234.76",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "0204"
+      },
+      "canonical": {
+        "account_holder": "zoe marie brennan",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "8819.71",
+        "existing_debt_payments": "1234.76"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Zoë Marie Brennan",
+        "service_address": "7505 Lakeview Lane, Tampa, FL 33637",
+        "bill_date": "05/18/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$220.49"
+      },
+      "canonical": {
+        "account_holder": "zoe marie brennan",
+        "service_address": "7505 lakeview lane tampa fl 33637",
+        "bill_date": "2026-05-18"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0011",
+    "owner_id": "analyst_2",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [],
+    "hard_negatives": [],
+    "requires_mandatory_review": false,
+    "expected_status": "clean"
+  }
+}

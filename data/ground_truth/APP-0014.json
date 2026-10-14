@@ -1,0 +1,245 @@
+{
+  "application": {
+    "application_id": "APP-0014",
+    "owner_id": "analyst_2",
+    "applicant_name": "Martín Alejandro Núñez",
+    "amount_usd": 4000,
+    "term_months": 36,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0014/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0014/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0014/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0014/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0014/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0014/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0014/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0014/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "id_number": "D32652681",
+        "date_of_birth": "09/11/1973",
+        "address": "1883 Hillcrest Avenue, Albany, NY 12268",
+        "declared_monthly_income": "$6,157.70",
+        "requested_amount": "$4,000.00",
+        "term_months": "36",
+        "loan_purpose": "Education costs",
+        "application_date": "06/26/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "id_number": "D32652681",
+        "date_of_birth": "1973-09-11",
+        "address": "1883 hillcrest avenue albany ny 12268",
+        "declared_monthly_income": "6157.70",
+        "requested_amount": "4000.00",
+        "term_months": "36"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "employer": "Barron PLC",
+        "net_salary": "$6,157.70",
+        "pay_period_start": "04/19/2026",
+        "pay_period_end": "05/18/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "employer": "barron plc",
+        "net_salary": "6157.70",
+        "pay_period_start": "2026-04-19",
+        "pay_period_end": "2026-05-18"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "employer": "Barron PLC",
+        "net_salary": "$6,157.70",
+        "pay_period_start": "05/19/2026",
+        "pay_period_end": "06/18/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "employer": "barron plc",
+        "net_salary": "6157.70",
+        "pay_period_start": "2026-05-19",
+        "pay_period_end": "2026-06-18"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "employer": "Barron PLC",
+        "job_title": "Clinical biochemist",
+        "hire_date": "08/30/2022",
+        "monthly_salary": "$6,157.70",
+        "letter_date": "06/06/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "employer": "barron plc",
+        "job_title": "clinical biochemist",
+        "hire_date": "2022-08-30",
+        "monthly_salary": "6157.70"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "MARTÍN ALEJANDRO NÚÑEZ",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$6,157.70",
+        "existing_debt_payments": "$554.19",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "7364"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "6157.70",
+        "existing_debt_payments": "554.19"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "MARTÍN ALEJANDRO NÚÑEZ",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$6,157.70",
+        "existing_debt_payments": "$554.19",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "7364"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "6157.70",
+        "existing_debt_payments": "554.19"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "MARTÍN ALEJANDRO NÚÑEZ",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$6,157.70",
+        "existing_debt_payments": "$554.19",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "7364"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "6157.70",
+        "existing_debt_payments": "554.19"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Martín Alejandro Núñez",
+        "service_address": "1883 Hillcrest Avenue, Albany, NY 12268",
+        "bill_date": "04/16/2026",
+        "provider": "Lakeside Electric",
+        "amount_due": "$153.94"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "service_address": "1883 hillcrest avenue albany ny 12268",
+        "bill_date": "2026-04-16"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0014",
+    "owner_id": "analyst_2",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [
+      {
+        "defect_type": "MISSING_DOC",
+        "rule_ids": [
+          "R-1.1"
+        ],
+        "doc_types": [
+          "id_document"
+        ],
+        "field": null,
+        "description": "id_document #1 is missing from the file",
+        "near_threshold": false,
+        "details": {}
+      }
+    ],
+    "hard_negatives": [],
+    "requires_mandatory_review": false,
+    "expected_status": "needs_review"
+  }
+}

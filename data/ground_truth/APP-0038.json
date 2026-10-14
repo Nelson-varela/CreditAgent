@@ -1,0 +1,278 @@
+{
+  "application": {
+    "application_id": "APP-0038",
+    "owner_id": "analyst_1",
+    "applicant_name": "Chloé Anne Tremblay",
+    "amount_usd": 4300,
+    "term_months": 12,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0038/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0038/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0038/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0038/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0038/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0038/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0038/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0038/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0038/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Chloé Anne Tremblay",
+        "id_number": "D64619273",
+        "date_of_birth": "12/15/1993",
+        "address": "2714 Cedar Road, Apt 11D, Portland, OR 97278",
+        "declared_monthly_income": "$3,335.35",
+        "requested_amount": "$4,300.00",
+        "term_months": "12",
+        "loan_purpose": "Medical expenses",
+        "application_date": "06/25/2026"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "id_number": "D64619273",
+        "date_of_birth": "1993-12-15",
+        "address": "2714 cedar road unit 11d portland or 97278",
+        "declared_monthly_income": "3335.35",
+        "requested_amount": "4300.00",
+        "term_months": "12"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "CHLOÉ ANNE TREMBLAY",
+        "id_number": "D64619273",
+        "date_of_birth": "12/15/1993",
+        "issue_date": "03/12/2019",
+        "expiry_date": "03/12/2027"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "id_number": "D64619273",
+        "date_of_birth": "1993-12-15",
+        "expiry_date": "2027-03-12"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Chloé Anne Tremblay",
+        "employer": "Marshall-Anderson",
+        "net_salary": "$2,970.83",
+        "pay_period_start": "04/23/2026",
+        "pay_period_end": "05/22/2026"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "employer": "marshall anderson",
+        "net_salary": "2970.83",
+        "pay_period_start": "2026-04-23",
+        "pay_period_end": "2026-05-22"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Chloé Anne Tremblay",
+        "employer": "Marshall-Anderson",
+        "net_salary": "$2,970.83",
+        "pay_period_start": "05/23/2026",
+        "pay_period_end": "06/22/2026"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "employer": "marshall anderson",
+        "net_salary": "2970.83",
+        "pay_period_start": "2026-05-23",
+        "pay_period_end": "2026-06-22"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Chloé Anne Tremblay",
+        "employer": "Marshall-Anderson",
+        "job_title": "Research scientist (physical sciences)",
+        "hire_date": "12/30/2025",
+        "monthly_salary": "$2,970.83",
+        "letter_date": "06/01/2026"
+      },
+      "canonical": {
+        "full_name": "chloe anne tremblay",
+        "employer": "marshall anderson",
+        "job_title": "research scientist physical sciences",
+        "hire_date": "2025-12-30",
+        "monthly_salary": "2970.83"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "CHLOÉ ANNE TREMBLAY",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$2,970.83",
+        "existing_debt_payments": "$475.33",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "8082"
+      },
+      "canonical": {
+        "account_holder": "chloe anne tremblay",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "2970.83",
+        "existing_debt_payments": "475.33"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "CHLOÉ ANNE TREMBLAY",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$2,970.83",
+        "existing_debt_payments": "$475.33",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "8082"
+      },
+      "canonical": {
+        "account_holder": "chloe anne tremblay",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "2970.83",
+        "existing_debt_payments": "475.33"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "CHLOÉ ANNE TREMBLAY",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$2,970.83",
+        "existing_debt_payments": "$475.33",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "8082"
+      },
+      "canonical": {
+        "account_holder": "chloe anne tremblay",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "2970.83",
+        "existing_debt_payments": "475.33"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Chloé Anne Tremblay",
+        "service_address": "2714 Cedar Road, Apt 11D, Portland, OR 97278",
+        "bill_date": "04/18/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$74.27"
+      },
+      "canonical": {
+        "account_holder": "chloe anne tremblay",
+        "service_address": "2714 cedar road unit 11d portland or 97278",
+        "bill_date": "2026-04-18"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0038",
+    "owner_id": "analyst_1",
+    "split": "dev",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [
+      {
+        "defect_type": "INCOME_MISMATCH",
+        "rule_ids": [
+          "R-3.1",
+          "R-3.2"
+        ],
+        "doc_types": [
+          "application_form",
+          "payslip",
+          "employment_letter"
+        ],
+        "field": "declared_monthly_income",
+        "description": "declared income differs from documented income by 12.3%",
+        "near_threshold": true,
+        "details": {}
+      }
+    ],
+    "hard_negatives": [
+      {
+        "kind": "tenure_at_limit",
+        "doc_type": "employment_letter",
+        "field": "hire_date",
+        "description": "employed for just over 6 months"
+      }
+    ],
+    "requires_mandatory_review": false,
+    "expected_status": "needs_review"
+  }
+}

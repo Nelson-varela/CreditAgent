@@ -1,0 +1,268 @@
+{
+  "application": {
+    "application_id": "APP-0025",
+    "owner_id": "analyst_1",
+    "applicant_name": "José Luis Muñoz",
+    "amount_usd": 3600,
+    "term_months": 48,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0025/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0025/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0025/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0025/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0025/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0025/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0025/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0025/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0025/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "José Luis Muñoz",
+        "id_number": "D65292770",
+        "date_of_birth": "12/30/1981",
+        "address": "6582 Lakeview Road, Phoenix, AZ 85073",
+        "declared_monthly_income": "$4,353.43",
+        "requested_amount": "$3,600.00",
+        "term_months": "48",
+        "loan_purpose": "Home improvement",
+        "application_date": "06/27/2026"
+      },
+      "canonical": {
+        "full_name": "jose luis munoz",
+        "id_number": "D65292770",
+        "date_of_birth": "1981-12-30",
+        "address": "6582 lakeview road phoenix az 85073",
+        "declared_monthly_income": "4353.43",
+        "requested_amount": "3600.00",
+        "term_months": "48"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "JOSÉ LUIS MUÑOZ",
+        "id_number": "D65292770",
+        "date_of_birth": "12/30/1981",
+        "issue_date": "02/23/2019",
+        "expiry_date": "02/23/2027"
+      },
+      "canonical": {
+        "full_name": "jose luis munoz",
+        "id_number": "D65292770",
+        "date_of_birth": "1981-12-30",
+        "expiry_date": "2027-02-23"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "José Luis Muñoz",
+        "employer": "Carr, White and Thomas",
+        "net_salary": "$4,353.43",
+        "pay_period_start": "04/05/2026",
+        "pay_period_end": "05/04/2026"
+      },
+      "canonical": {
+        "full_name": "jose luis munoz",
+        "employer": "carr white and thomas",
+        "net_salary": "4353.43",
+        "pay_period_start": "2026-04-05",
+        "pay_period_end": "2026-05-04"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "José Luis Muñoz",
+        "employer": "Carr, White and Thomas",
+        "net_salary": "$4,353.43",
+        "pay_period_start": "05/05/2026",
+        "pay_period_end": "06/04/2026"
+      },
+      "canonical": {
+        "full_name": "jose luis munoz",
+        "employer": "carr white and thomas",
+        "net_salary": "4353.43",
+        "pay_period_start": "2026-05-05",
+        "pay_period_end": "2026-06-04"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "José Luis Muñoz",
+        "employer": "Carr, White and Thomas",
+        "job_title": "Barrister",
+        "hire_date": "05/30/2024",
+        "monthly_salary": "$4,353.43",
+        "letter_date": "05/31/2026"
+      },
+      "canonical": {
+        "full_name": "jose luis munoz",
+        "employer": "carr white and thomas",
+        "job_title": "barrister",
+        "hire_date": "2024-05-30",
+        "monthly_salary": "4353.43"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "JOSÉ LUIS OCONNELL",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$4,353.43",
+        "existing_debt_payments": "$522.41",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "3899"
+      },
+      "canonical": {
+        "account_holder": "jose luis oconnell",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "4353.43",
+        "existing_debt_payments": "522.41"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "JOSÉ LUIS MUÑOZ",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$4,353.43",
+        "existing_debt_payments": "$522.41",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "3899"
+      },
+      "canonical": {
+        "account_holder": "jose luis munoz",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "4353.43",
+        "existing_debt_payments": "522.41"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "JOSÉ LUIS MUÑOZ",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$4,353.43",
+        "existing_debt_payments": "$522.41",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "3899"
+      },
+      "canonical": {
+        "account_holder": "jose luis munoz",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "4353.43",
+        "existing_debt_payments": "522.41"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "José Luis Muñoz",
+        "service_address": "6582 Lakeview Road, Phoenix, AZ 85073",
+        "bill_date": "05/22/2026",
+        "provider": "Lakeside Electric",
+        "amount_due": "$108.84"
+      },
+      "canonical": {
+        "account_holder": "jose luis munoz",
+        "service_address": "6582 lakeview road phoenix az 85073",
+        "bill_date": "2026-05-22"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0025",
+    "owner_id": "analyst_1",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [
+      {
+        "defect_type": "NAME_MISMATCH",
+        "rule_ids": [
+          "R-2.1"
+        ],
+        "doc_types": [
+          "bank_statement"
+        ],
+        "field": "account_holder",
+        "description": "surname differs on bank_statement",
+        "near_threshold": false,
+        "details": {}
+      }
+    ],
+    "hard_negatives": [],
+    "requires_mandatory_review": false,
+    "expected_status": "needs_review"
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "application": {
+    "application_id": "APP-0034",
+    "owner_id": "analyst_2",
+    "applicant_name": "Martín Alejandro Núñez",
+    "amount_usd": 11800,
+    "term_months": 12,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0034/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0034/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0034/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0034/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0034/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0034/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0034/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0034/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0034/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "id_number": "D93812144",
+        "date_of_birth": "12/18/1976",
+        "address": "7489 Hillcrest Court, Apt 22D, Phoenix, AZ 85057",
+        "declared_monthly_income": "$5,309.52",
+        "requested_amount": "$11,800.00",
+        "term_months": "12",
+        "loan_purpose": "Home improvement",
+        "application_date": "06/25/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "id_number": "D93812144",
+        "date_of_birth": "1976-12-18",
+        "address": "7489 hillcrest court unit 22d phoenix az 85057",
+        "declared_monthly_income": "5309.52",
+        "requested_amount": "11800.00",
+        "term_months": "12"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "MARTÍN ALEJANDRO NÚÑEZ",
+        "id_number": "D97812144",
+        "date_of_birth": "12/18/1976",
+        "issue_date": "03/25/2021",
+        "expiry_date": "03/25/2029"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "id_number": "D97812144",
+        "date_of_birth": "1976-12-18",
+        "expiry_date": "2029-03-25"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "employer": "Bruce-Mcdonald",
+        "net_salary": "$5,309.52",
+        "pay_period_start": "04/15/2026",
+        "pay_period_end": "05/14/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "employer": "bruce mcdonald",
+        "net_salary": "5309.52",
+        "pay_period_start": "2026-04-15",
+        "pay_period_end": "2026-05-14"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "employer": "Bruce-Mcdonald",
+        "net_salary": "$5,309.52",
+        "pay_period_start": "05/15/2026",
+        "pay_period_end": "06/14/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "employer": "bruce mcdonald",
+        "net_salary": "5309.52",
+        "pay_period_start": "2026-05-15",
+        "pay_period_end": "2026-06-14"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "employer": "Bruce-Mcdonald",
+        "job_title": "Manufacturing systems engineer",
+        "hire_date": "08/30/2021",
+        "monthly_salary": "$5,309.52",
+        "letter_date": "06/02/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "employer": "bruce mcdonald",
+        "job_title": "manufacturing systems engineer",
+        "hire_date": "2021-08-30",
+        "monthly_salary": "5309.52"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "MARTÍN ALEJANDRO NÚÑEZ",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$5,309.52",
+        "existing_debt_payments": "$932.03",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "5090"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "5309.52",
+        "existing_debt_payments": "932.03"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "MARTÍN ALEJANDRO NÚÑEZ",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$5,309.52",
+        "existing_debt_payments": "$932.03",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "5090"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "5309.52",
+        "existing_debt_payments": "932.03"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "MARTÍN ALEJANDRO NÚÑEZ",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$5,309.52",
+        "existing_debt_payments": "$932.03",
+        "bank_name": "First Prairie Bank",
+        "account_last4": "5090"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "5309.52",
+        "existing_debt_payments": "932.03"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Martín Alejandro Núñez",
+        "service_address": "7489 Hillcrest Court, Apt 22D, Phoenix, AZ 85057",
+        "bill_date": "04/25/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$132.74"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "service_address": "7489 hillcrest court unit 22d phoenix az 85057",
+        "bill_date": "2026-04-25"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0034",
+    "owner_id": "analyst_2",
+    "split": "dev",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [
+      {
+        "defect_type": "ID_MISMATCH",
+        "rule_ids": [
+          "R-2.2"
+        ],
+        "doc_types": [
+          "application_form",
+          "id_document"
+        ],
+        "field": "id_number",
+        "description": "one wrong digit on id_document",
+        "near_threshold": false,
+        "details": {}
+      }
+    ],
+    "hard_negatives": [
+      {
+        "kind": "dti_near_limit",
+        "doc_type": "bank_statement",
+        "field": "existing_debt_payments",
+        "description": "debt-to-income is 37.3%, just under the 40% limit"
+      }
+    ],
+    "requires_mandatory_review": false,
+    "expected_status": "needs_review"
+  }
+}

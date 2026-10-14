@@ -1,0 +1,213 @@
+{
+  "as_of_date": "2026-06-30",
+  "defect_types": {
+    "ADDRESS_MISMATCH": 5,
+    "EXPIRED_DOC": 4,
+    "ID_MISMATCH": 6,
+    "INCOME_MISMATCH": 6,
+    "INJECTION_ATTEMPT": 5,
+    "MISSING_DOC": 4,
+    "NAME_MISMATCH": 2,
+    "POLICY_VIOLATION": 2,
+    "STALE_PAYSLIP": 4
+  },
+  "defects_per_file": {
+    "0": 12,
+    "1": 20,
+    "2": 6,
+    "3": 2
+  },
+  "expected_status": {
+    "clean": 10,
+    "needs_review": 30
+  },
+  "files": {
+    "APP-0001": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0002": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0003": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0004": {
+      "owner": "analyst_1",
+      "split": "dev"
+    },
+    "APP-0005": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0006": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0007": {
+      "owner": "analyst_1",
+      "split": "dev"
+    },
+    "APP-0008": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0009": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0010": {
+      "owner": "analyst_1",
+      "split": "dev"
+    },
+    "APP-0011": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0012": {
+      "owner": "analyst_2",
+      "split": "dev"
+    },
+    "APP-0013": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0014": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0015": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0016": {
+      "owner": "analyst_1",
+      "split": "dev"
+    },
+    "APP-0017": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0018": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0019": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0020": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0021": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0022": {
+      "owner": "analyst_1",
+      "split": "dev"
+    },
+    "APP-0023": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0024": {
+      "owner": "analyst_1",
+      "split": "dev"
+    },
+    "APP-0025": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0026": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0027": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0028": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0029": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0030": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0031": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0032": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0033": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0034": {
+      "owner": "analyst_2",
+      "split": "dev"
+    },
+    "APP-0035": {
+      "owner": "analyst_2",
+      "split": "test"
+    },
+    "APP-0036": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0037": {
+      "owner": "analyst_2",
+      "split": "dev"
+    },
+    "APP-0038": {
+      "owner": "analyst_1",
+      "split": "dev"
+    },
+    "APP-0039": {
+      "owner": "analyst_1",
+      "split": "test"
+    },
+    "APP-0040": {
+      "owner": "analyst_1",
+      "split": "test"
+    }
+  },
+  "hard_negative_kinds": {
+    "address_abbreviated": 3,
+    "dti_near_limit": 2,
+    "id_expires_soon": 1,
+    "income_just_under_tolerance": 2,
+    "income_within_tolerance": 1,
+    "name_accents_case": 2,
+    "name_last_first": 4,
+    "name_middle_initial": 1,
+    "name_middle_omitted": 3,
+    "payslip_age_at_limit": 2,
+    "tenure_at_limit": 3,
+    "utility_bill_age_at_limit": 2
+  },
+  "n_files": 40,
+  "near_threshold_defects": 8,
+  "owner": {
+    "analyst_1": 24,
+    "analyst_2": 16
+  },
+  "policy_version": "1.0.0",
+  "requires_mandatory_review": 3,
+  "seed": 42,
+  "split": {
+    "dev": 10,
+    "test": 30
+  }
+}

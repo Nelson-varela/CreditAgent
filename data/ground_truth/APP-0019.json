@@ -1,0 +1,268 @@
+{
+  "application": {
+    "application_id": "APP-0019",
+    "owner_id": "analyst_1",
+    "applicant_name": "Glenda Antonio Johnson",
+    "amount_usd": 65900,
+    "term_months": 60,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0019/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0019/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0019/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0019/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0019/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0019/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0019/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0019/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0019/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Glenda Antonio Johnson",
+        "id_number": "D19760464",
+        "date_of_birth": "01/04/1975",
+        "address": "3843 Oak Court, Charlotte, NC 28216",
+        "declared_monthly_income": "$8,525.57",
+        "requested_amount": "$65,900.00",
+        "term_months": "60",
+        "loan_purpose": "Education costs",
+        "application_date": "06/28/2026"
+      },
+      "canonical": {
+        "full_name": "glenda antonio johnson",
+        "id_number": "D19760464",
+        "date_of_birth": "1975-01-04",
+        "address": "3843 oak court charlotte nc 28216",
+        "declared_monthly_income": "8525.57",
+        "requested_amount": "65900.00",
+        "term_months": "60"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "GLENDA ANTONIO JOHNSON",
+        "id_number": "D19760464",
+        "date_of_birth": "01/04/1975",
+        "issue_date": "11/06/2023",
+        "expiry_date": "11/06/2031"
+      },
+      "canonical": {
+        "full_name": "glenda antonio johnson",
+        "id_number": "D19760464",
+        "date_of_birth": "1975-01-04",
+        "expiry_date": "2031-11-06"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Glenda Antonio Johnson",
+        "employer": "Robles Inc",
+        "net_salary": "$8,525.57",
+        "pay_period_start": "04/26/2026",
+        "pay_period_end": "05/25/2026"
+      },
+      "canonical": {
+        "full_name": "glenda antonio johnson",
+        "employer": "robles inc",
+        "net_salary": "8525.57",
+        "pay_period_start": "2026-04-26",
+        "pay_period_end": "2026-05-25"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Glenda Antonio Johnson",
+        "employer": "Robles Inc",
+        "net_salary": "$8,525.57",
+        "pay_period_start": "05/26/2026",
+        "pay_period_end": "06/25/2026"
+      },
+      "canonical": {
+        "full_name": "glenda antonio johnson",
+        "employer": "robles inc",
+        "net_salary": "8525.57",
+        "pay_period_start": "2026-05-26",
+        "pay_period_end": "2026-06-25"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Glenda Antonio Johnson",
+        "employer": "Robles Inc",
+        "job_title": "Systems developer",
+        "hire_date": "06/30/2022",
+        "monthly_salary": "$8,525.57",
+        "letter_date": "05/21/2026"
+      },
+      "canonical": {
+        "full_name": "glenda antonio johnson",
+        "employer": "robles inc",
+        "job_title": "systems developer",
+        "hire_date": "2022-06-30",
+        "monthly_salary": "8525.57"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "GLENDA ANTONIO JOHNSON",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$8,525.57",
+        "existing_debt_payments": "$511.53",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "8864"
+      },
+      "canonical": {
+        "account_holder": "glenda antonio johnson",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "8525.57",
+        "existing_debt_payments": "511.53"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "GLENDA ANTONIO JOHNSON",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$8,525.57",
+        "existing_debt_payments": "$511.53",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "8864"
+      },
+      "canonical": {
+        "account_holder": "glenda antonio johnson",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "8525.57",
+        "existing_debt_payments": "511.53"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "GLENDA ANTONIO JOHNSON",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$8,525.57",
+        "existing_debt_payments": "$511.53",
+        "bank_name": "Summit Valley Credit Union",
+        "account_last4": "8864"
+      },
+      "canonical": {
+        "account_holder": "glenda antonio johnson",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "8525.57",
+        "existing_debt_payments": "511.53"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Glenda Antonio Johnson",
+        "service_address": "3843 Oak Court, Charlotte, NC 28216",
+        "bill_date": "06/18/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$213.14"
+      },
+      "canonical": {
+        "account_holder": "glenda antonio johnson",
+        "service_address": "3843 oak court charlotte nc 28216",
+        "bill_date": "2026-06-18"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0019",
+    "owner_id": "analyst_1",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [
+      {
+        "defect_type": "POLICY_VIOLATION",
+        "rule_ids": [
+          "R-6.2"
+        ],
+        "doc_types": [
+          "application_form"
+        ],
+        "field": "requested_amount",
+        "description": "requested amount $65,900 exceeds the $50,000 limit",
+        "near_threshold": false,
+        "details": {}
+      }
+    ],
+    "hard_negatives": [],
+    "requires_mandatory_review": true,
+    "expected_status": "needs_review"
+  }
+}

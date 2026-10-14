@@ -1,0 +1,290 @@
+{
+  "application": {
+    "application_id": "APP-0024",
+    "owner_id": "analyst_1",
+    "applicant_name": "Kathleen Sarah Higgins",
+    "amount_usd": 7100,
+    "term_months": 12,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0024/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0024/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0024/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0024/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0024/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0024/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0024/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0024/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0024/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Kathleen Sarah Higgins",
+        "id_number": "D52691609",
+        "date_of_birth": "12/02/2000",
+        "address": "8773 Willow Road, Springfield, IL 62764",
+        "declared_monthly_income": "$4,318.35",
+        "requested_amount": "$7,100.00",
+        "term_months": "12",
+        "loan_purpose": "Vehicle repair",
+        "application_date": "06/28/2026"
+      },
+      "canonical": {
+        "full_name": "kathleen sarah higgins",
+        "id_number": "D52691609",
+        "date_of_birth": "2000-12-02",
+        "address": "8773 willow road springfield il 62764",
+        "declared_monthly_income": "4318.35",
+        "requested_amount": "7100.00",
+        "term_months": "12"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "KATHLEEN SARAH HIGGINS",
+        "id_number": "D52691609",
+        "date_of_birth": "12/02/2000",
+        "issue_date": "01/21/2021",
+        "expiry_date": "01/21/2029"
+      },
+      "canonical": {
+        "full_name": "kathleen sarah higgins",
+        "id_number": "D52691609",
+        "date_of_birth": "2000-12-02",
+        "expiry_date": "2029-01-21"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Kathleen Sarah Higgins",
+        "employer": "Parsons PLC",
+        "net_salary": "$4,318.35",
+        "pay_period_start": "04/07/2026",
+        "pay_period_end": "05/06/2026"
+      },
+      "canonical": {
+        "full_name": "kathleen sarah higgins",
+        "employer": "parsons plc",
+        "net_salary": "4318.35",
+        "pay_period_start": "2026-04-07",
+        "pay_period_end": "2026-05-06"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Kathleen Sarah Higgins",
+        "employer": "Parsons PLC",
+        "net_salary": "$4,318.35",
+        "pay_period_start": "05/07/2026",
+        "pay_period_end": "06/06/2026"
+      },
+      "canonical": {
+        "full_name": "kathleen sarah higgins",
+        "employer": "parsons plc",
+        "net_salary": "4318.35",
+        "pay_period_start": "2026-05-07",
+        "pay_period_end": "2026-06-06"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Kathleen Sarah Higgins",
+        "employer": "Parsons PLC",
+        "job_title": "Community education officer",
+        "hire_date": "12/27/2025",
+        "monthly_salary": "$2,497.73",
+        "letter_date": "06/13/2026"
+      },
+      "canonical": {
+        "full_name": "kathleen sarah higgins",
+        "employer": "parsons plc",
+        "job_title": "community education officer",
+        "hire_date": "2025-12-27",
+        "monthly_salary": "2497.73"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "KATHLEEN SARAH HIGGINS",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$4,318.35",
+        "existing_debt_payments": "$518.20",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "9657"
+      },
+      "canonical": {
+        "account_holder": "kathleen sarah higgins",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "4318.35",
+        "existing_debt_payments": "518.20"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "KATHLEEN SARAH HIGGINS",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$4,318.35",
+        "existing_debt_payments": "$518.20",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "9657"
+      },
+      "canonical": {
+        "account_holder": "kathleen sarah higgins",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "4318.35",
+        "existing_debt_payments": "518.20"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "KATHLEEN SARAH HIGGINS",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$4,318.35",
+        "existing_debt_payments": "$518.20",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "9657"
+      },
+      "canonical": {
+        "account_holder": "kathleen sarah higgins",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "4318.35",
+        "existing_debt_payments": "518.20"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Kathleen Sarah Higgins",
+        "service_address": "8773 Willow Road, Portland, OR 97259",
+        "bill_date": "04/17/2026",
+        "provider": "Northgate Gas & Electric",
+        "amount_due": "$107.96"
+      },
+      "canonical": {
+        "account_holder": "kathleen sarah higgins",
+        "service_address": "8773 willow road portland or 97259",
+        "bill_date": "2026-04-17"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0024",
+    "owner_id": "analyst_1",
+    "split": "dev",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [
+      {
+        "defect_type": "INCOME_MISMATCH",
+        "rule_ids": [
+          "R-3.2"
+        ],
+        "doc_types": [
+          "employment_letter",
+          "application_form"
+        ],
+        "field": "monthly_salary",
+        "description": "employment letter salary differs from declared income by 72.9%",
+        "near_threshold": false,
+        "details": {}
+      },
+      {
+        "defect_type": "ADDRESS_MISMATCH",
+        "rule_ids": [
+          "R-2.3"
+        ],
+        "doc_types": [
+          "application_form",
+          "utility_bill"
+        ],
+        "field": "service_address",
+        "description": "utility bill shows a different address than the application form",
+        "near_threshold": false,
+        "details": {}
+      }
+    ],
+    "hard_negatives": [
+      {
+        "kind": "tenure_at_limit",
+        "doc_type": "employment_letter",
+        "field": "hire_date",
+        "description": "employed for just over 6 months"
+      }
+    ],
+    "requires_mandatory_review": false,
+    "expected_status": "needs_review"
+  }
+}

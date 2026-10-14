@@ -1,0 +1,261 @@
+{
+  "application": {
+    "application_id": "APP-0040",
+    "owner_id": "analyst_1",
+    "applicant_name": "Brittany Allison Edwards",
+    "amount_usd": 2600,
+    "term_months": 36,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0040/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0040/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0040/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0040/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0040/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0040/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0040/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0040/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0040/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Brittany Allison Edwards",
+        "id_number": "D19066914",
+        "date_of_birth": "10/23/1988",
+        "address": "392 Oak Court, Apt 9B, Austin, TX 78784",
+        "declared_monthly_income": "$4,507.84",
+        "requested_amount": "$2,600.00",
+        "term_months": "36",
+        "loan_purpose": "Debt consolidation",
+        "application_date": "06/27/2026"
+      },
+      "canonical": {
+        "full_name": "brittany allison edwards",
+        "id_number": "D19066914",
+        "date_of_birth": "1988-10-23",
+        "address": "392 oak court unit 9b austin tx 78784",
+        "declared_monthly_income": "4507.84",
+        "requested_amount": "2600.00",
+        "term_months": "36"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "BRITTANY ALLISON EDWARDS",
+        "id_number": "D19066914",
+        "date_of_birth": "10/23/1988",
+        "issue_date": "08/18/2023",
+        "expiry_date": "08/18/2031"
+      },
+      "canonical": {
+        "full_name": "brittany allison edwards",
+        "id_number": "D19066914",
+        "date_of_birth": "1988-10-23",
+        "expiry_date": "2031-08-18"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Brittany Allison Edwards",
+        "employer": "Zimmerman Ltd",
+        "net_salary": "$4,507.84",
+        "pay_period_start": "04/13/2026",
+        "pay_period_end": "05/12/2026"
+      },
+      "canonical": {
+        "full_name": "brittany allison edwards",
+        "employer": "zimmerman ltd",
+        "net_salary": "4507.84",
+        "pay_period_start": "2026-04-13",
+        "pay_period_end": "2026-05-12"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Brittany Allison Edwards",
+        "employer": "Zimmerman Ltd",
+        "net_salary": "$4,507.84",
+        "pay_period_start": "05/13/2026",
+        "pay_period_end": "06/12/2026"
+      },
+      "canonical": {
+        "full_name": "brittany allison edwards",
+        "employer": "zimmerman ltd",
+        "net_salary": "4507.84",
+        "pay_period_start": "2026-05-13",
+        "pay_period_end": "2026-06-12"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Edwards, Brittany Allison",
+        "employer": "Zimmerman Ltd",
+        "job_title": "Drilling engineer",
+        "hire_date": "03/30/2025",
+        "monthly_salary": "$4,507.84",
+        "letter_date": "06/05/2026"
+      },
+      "canonical": {
+        "full_name": "brittany allison edwards",
+        "employer": "zimmerman ltd",
+        "job_title": "drilling engineer",
+        "hire_date": "2025-03-30",
+        "monthly_salary": "4507.84"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "BRITTANY ALLISON EDWARDS",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$4,507.84",
+        "existing_debt_payments": "$450.78",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "2812"
+      },
+      "canonical": {
+        "account_holder": "brittany allison edwards",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "4507.84",
+        "existing_debt_payments": "450.78"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "BRITTANY ALLISON EDWARDS",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$4,507.84",
+        "existing_debt_payments": "$450.78",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "2812"
+      },
+      "canonical": {
+        "account_holder": "brittany allison edwards",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "4507.84",
+        "existing_debt_payments": "450.78"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "BRITTANY ALLISON EDWARDS",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$4,507.84",
+        "existing_debt_payments": "$450.78",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "2812"
+      },
+      "canonical": {
+        "account_holder": "brittany allison edwards",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "4507.84",
+        "existing_debt_payments": "450.78"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Brittany Allison Edwards",
+        "service_address": "392 Oak Court, Apt 9B, Austin, TX 78784",
+        "bill_date": "05/21/2026",
+        "provider": "Northgate Gas & Electric",
+        "amount_due": "$112.70"
+      },
+      "canonical": {
+        "account_holder": "brittany allison edwards",
+        "service_address": "392 oak court unit 9b austin tx 78784",
+        "bill_date": "2026-05-21"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0040",
+    "owner_id": "analyst_1",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [],
+    "hard_negatives": [
+      {
+        "kind": "name_last_first",
+        "doc_type": "employment_letter",
+        "field": "full_name",
+        "description": "'Surname, Given' order"
+      }
+    ],
+    "requires_mandatory_review": false,
+    "expected_status": "clean"
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "application": {
+    "application_id": "APP-0018",
+    "owner_id": "analyst_2",
+    "applicant_name": "Mark Michelle Taylor",
+    "amount_usd": 33000,
+    "term_months": 60,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0018/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0018/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0018/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0018/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0018/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0018/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0018/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0018/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0018/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Mark Michelle Taylor",
+        "id_number": "D85731772",
+        "date_of_birth": "05/04/1993",
+        "address": "7265 Elm Drive, Albany, NY 12222",
+        "declared_monthly_income": "$7,569.90",
+        "requested_amount": "$33,000.00",
+        "term_months": "60",
+        "loan_purpose": "Debt consolidation",
+        "application_date": "06/25/2026"
+      },
+      "canonical": {
+        "full_name": "mark michelle taylor",
+        "id_number": "D85731772",
+        "date_of_birth": "1993-05-04",
+        "address": "7265 elm drive albany ny 12222",
+        "declared_monthly_income": "7569.90",
+        "requested_amount": "33000.00",
+        "term_months": "60"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "MARK MICHELLE TAYLOR",
+        "id_number": "D85731772",
+        "date_of_birth": "05/04/1993",
+        "issue_date": "06/07/2021",
+        "expiry_date": "06/07/2029"
+      },
+      "canonical": {
+        "full_name": "mark michelle taylor",
+        "id_number": "D85731772",
+        "date_of_birth": "1993-05-04",
+        "expiry_date": "2029-06-07"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Mark Michelle Taylor",
+        "employer": "Gordon-English",
+        "net_salary": "$7,569.90",
+        "pay_period_start": "04/17/2026",
+        "pay_period_end": "05/16/2026"
+      },
+      "canonical": {
+        "full_name": "mark michelle taylor",
+        "employer": "gordon english",
+        "net_salary": "7569.90",
+        "pay_period_start": "2026-04-17",
+        "pay_period_end": "2026-05-16"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Mark Michelle Taylor",
+        "employer": "Gordon-English",
+        "net_salary": "$7,569.90",
+        "pay_period_start": "05/17/2026",
+        "pay_period_end": "06/16/2026"
+      },
+      "canonical": {
+        "full_name": "mark michelle taylor",
+        "employer": "gordon english",
+        "net_salary": "7569.90",
+        "pay_period_start": "2026-05-17",
+        "pay_period_end": "2026-06-16"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Mark Michelle Taylor",
+        "employer": "Gordon-English",
+        "job_title": "Management consultant",
+        "hire_date": "12/30/2021",
+        "monthly_salary": "$7,569.90",
+        "letter_date": "06/17/2026"
+      },
+      "canonical": {
+        "full_name": "mark michelle taylor",
+        "employer": "gordon english",
+        "job_title": "management consultant",
+        "hire_date": "2021-12-30",
+        "monthly_salary": "7569.90"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "MARK MICHELLE TAYLOR",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$7,569.90",
+        "existing_debt_payments": "$378.50",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "6644"
+      },
+      "canonical": {
+        "account_holder": "mark michelle taylor",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "7569.90",
+        "existing_debt_payments": "378.50"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "MARK MICHELLE TAYLOR",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$7,569.90",
+        "existing_debt_payments": "$378.50",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "6644"
+      },
+      "canonical": {
+        "account_holder": "mark michelle taylor",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "7569.90",
+        "existing_debt_payments": "378.50"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "MARK MICHELLE TAYLOR",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$7,569.90",
+        "existing_debt_payments": "$378.50",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "6644"
+      },
+      "canonical": {
+        "account_holder": "mark michelle taylor",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "7569.90",
+        "existing_debt_payments": "378.50"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Mark Michelle Taylor",
+        "service_address": "7265 Elm Drive, Albany, NY 12222",
+        "bill_date": "04/19/2026",
+        "provider": "Lakeside Electric",
+        "amount_due": "$189.25"
+      },
+      "canonical": {
+        "account_holder": "mark michelle taylor",
+        "service_address": "7265 elm drive albany ny 12222",
+        "bill_date": "2026-04-19"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0018",
+    "owner_id": "analyst_2",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [],
+    "hard_negatives": [],
+    "requires_mandatory_review": true,
+    "expected_status": "needs_review"
+  }
+}

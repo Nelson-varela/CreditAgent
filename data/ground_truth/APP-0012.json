@@ -1,0 +1,261 @@
+{
+  "application": {
+    "application_id": "APP-0012",
+    "owner_id": "analyst_2",
+    "applicant_name": "Martín Alejandro Núñez",
+    "amount_usd": 11500,
+    "term_months": 12,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0012/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0012/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0012/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0012/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0012/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0012/bank_statement_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0012/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0012/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0012/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "id_number": "D32635644",
+        "date_of_birth": "08/23/1981",
+        "address": "8854 Lakeview Drive, Apt 28B, Phoenix, AZ 85062",
+        "declared_monthly_income": "$8,784.33",
+        "requested_amount": "$11,500.00",
+        "term_months": "12",
+        "loan_purpose": "Education costs",
+        "application_date": "06/30/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "id_number": "D32635644",
+        "date_of_birth": "1981-08-23",
+        "address": "8854 lakeview drive unit 28b phoenix az 85062",
+        "declared_monthly_income": "8784.33",
+        "requested_amount": "11500.00",
+        "term_months": "12"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "MARTÍN ALEJANDRO NÚÑEZ",
+        "id_number": "D32635644",
+        "date_of_birth": "08/23/1981",
+        "issue_date": "07/03/2018",
+        "expiry_date": "07/03/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "id_number": "D32635644",
+        "date_of_birth": "1981-08-23",
+        "expiry_date": "2026-07-03"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "employer": "Rosario-Bird",
+        "net_salary": "$8,784.33",
+        "pay_period_start": "04/12/2026",
+        "pay_period_end": "05/11/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "employer": "rosario bird",
+        "net_salary": "8784.33",
+        "pay_period_start": "2026-04-12",
+        "pay_period_end": "2026-05-11"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "employer": "Rosario-Bird",
+        "net_salary": "$8,784.33",
+        "pay_period_start": "05/12/2026",
+        "pay_period_end": "06/11/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "employer": "rosario bird",
+        "net_salary": "8784.33",
+        "pay_period_start": "2026-05-12",
+        "pay_period_end": "2026-06-11"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Martín Alejandro Núñez",
+        "employer": "Rosario-Bird",
+        "job_title": "Scientist, biomedical",
+        "hire_date": "11/30/2017",
+        "monthly_salary": "$8,784.33",
+        "letter_date": "06/17/2026"
+      },
+      "canonical": {
+        "full_name": "martin alejandro nunez",
+        "employer": "rosario bird",
+        "job_title": "scientist biomedical",
+        "hire_date": "2017-11-30",
+        "monthly_salary": "8784.33"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 1,
+      "fields": {
+        "account_holder": "MARTÍN ALEJANDRO NÚÑEZ",
+        "period_start": "04/01/2026",
+        "period_end": "04/30/2026",
+        "payroll_deposits": "$8,784.33",
+        "existing_debt_payments": "$1,581.18",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "5158"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "period_start": "2026-04-01",
+        "period_end": "2026-04-30",
+        "payroll_deposits": "8784.33",
+        "existing_debt_payments": "1581.18"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "MARTÍN ALEJANDRO NÚÑEZ",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$8,784.33",
+        "existing_debt_payments": "$1,581.18",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "5158"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "8784.33",
+        "existing_debt_payments": "1581.18"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "MARTÍN ALEJANDRO NÚÑEZ",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$8,784.33",
+        "existing_debt_payments": "$1,581.18",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "5158"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "8784.33",
+        "existing_debt_payments": "1581.18"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Martín Alejandro Núñez",
+        "service_address": "8854 Lakeview Drive, Apt 28B, Phoenix, AZ 85062",
+        "bill_date": "06/17/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$219.61"
+      },
+      "canonical": {
+        "account_holder": "martin alejandro nunez",
+        "service_address": "8854 lakeview drive unit 28b phoenix az 85062",
+        "bill_date": "2026-06-17"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0012",
+    "owner_id": "analyst_2",
+    "split": "dev",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [],
+    "hard_negatives": [
+      {
+        "kind": "id_expires_soon",
+        "doc_type": "id_document",
+        "field": "expiry_date",
+        "description": "valid for 3 more days"
+      }
+    ],
+    "requires_mandatory_review": false,
+    "expected_status": "clean"
+  }
+}

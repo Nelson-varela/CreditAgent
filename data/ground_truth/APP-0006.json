@@ -1,0 +1,272 @@
+{
+  "application": {
+    "application_id": "APP-0006",
+    "owner_id": "analyst_1",
+    "applicant_name": "Inés Marisol Peña",
+    "amount_usd": 4600,
+    "term_months": 48,
+    "status": "received",
+    "received_at": "2026-06-30T12:00:00Z",
+    "documents": [
+      {
+        "doc_type": "application_form",
+        "s3_key": "applications/APP-0006/application_form_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "id_document",
+        "s3_key": "applications/APP-0006/id_document_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0006/payslip_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "payslip",
+        "s3_key": "applications/APP-0006/payslip_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "employment_letter",
+        "s3_key": "applications/APP-0006/employment_letter_1.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0006/bank_statement_2.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "bank_statement",
+        "s3_key": "applications/APP-0006/bank_statement_3.pdf",
+        "page_count": 1
+      },
+      {
+        "doc_type": "utility_bill",
+        "s3_key": "applications/APP-0006/utility_bill_1.pdf",
+        "page_count": 1
+      }
+    ],
+    "review_reasons": []
+  },
+  "documents": [
+    {
+      "doc_type": "application_form",
+      "index": 1,
+      "fields": {
+        "full_name": "Inés Marisol Peña",
+        "id_number": "D88520350",
+        "date_of_birth": "10/23/1987",
+        "address": "5154 Pine Lane, Charlotte, NC 28277",
+        "declared_monthly_income": "$2,296.91",
+        "requested_amount": "$4,600.00",
+        "term_months": "48",
+        "loan_purpose": "Medical expenses",
+        "application_date": "06/27/2026"
+      },
+      "canonical": {
+        "full_name": "ines marisol pena",
+        "id_number": "D88520350",
+        "date_of_birth": "1987-10-23",
+        "address": "5154 pine lane charlotte nc 28277",
+        "declared_monthly_income": "2296.91",
+        "requested_amount": "4600.00",
+        "term_months": "48"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "id_document",
+      "index": 1,
+      "fields": {
+        "full_name": "INÉS MARISOL PEÑA",
+        "id_number": "D88520305",
+        "date_of_birth": "10/23/1987",
+        "issue_date": "03/14/2020",
+        "expiry_date": "03/14/2028"
+      },
+      "canonical": {
+        "full_name": "ines marisol pena",
+        "id_number": "D88520305",
+        "date_of_birth": "1987-10-23",
+        "expiry_date": "2028-03-14"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 1,
+      "fields": {
+        "full_name": "Inés Marisol Peña",
+        "employer": "Kelly PLC",
+        "net_salary": "$3,081.03",
+        "pay_period_start": "04/18/2026",
+        "pay_period_end": "05/17/2026"
+      },
+      "canonical": {
+        "full_name": "ines marisol pena",
+        "employer": "kelly plc",
+        "net_salary": "3081.03",
+        "pay_period_start": "2026-04-18",
+        "pay_period_end": "2026-05-17"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "payslip",
+      "index": 2,
+      "fields": {
+        "full_name": "Inés Marisol Peña",
+        "employer": "Kelly PLC",
+        "net_salary": "$3,081.03",
+        "pay_period_start": "05/18/2026",
+        "pay_period_end": "06/17/2026"
+      },
+      "canonical": {
+        "full_name": "ines marisol pena",
+        "employer": "kelly plc",
+        "net_salary": "3081.03",
+        "pay_period_start": "2026-05-18",
+        "pay_period_end": "2026-06-17"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "employment_letter",
+      "index": 1,
+      "fields": {
+        "full_name": "Inés Marisol Peña",
+        "employer": "Kelly PLC",
+        "job_title": "Farm manager",
+        "hire_date": "09/30/2016",
+        "monthly_salary": "$3,081.03",
+        "letter_date": "06/20/2026"
+      },
+      "canonical": {
+        "full_name": "ines marisol pena",
+        "employer": "kelly plc",
+        "job_title": "farm manager",
+        "hire_date": "2016-09-30",
+        "monthly_salary": "3081.03"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 2,
+      "fields": {
+        "account_holder": "INÉS MARISOL PEÑA",
+        "period_start": "05/01/2026",
+        "period_end": "05/31/2026",
+        "payroll_deposits": "$3,081.03",
+        "existing_debt_payments": "$215.67",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "0539"
+      },
+      "canonical": {
+        "account_holder": "ines marisol pena",
+        "period_start": "2026-05-01",
+        "period_end": "2026-05-31",
+        "payroll_deposits": "3081.03",
+        "existing_debt_payments": "215.67"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "bank_statement",
+      "index": 3,
+      "fields": {
+        "account_holder": "INÉS MARISOL PEÑA",
+        "period_start": "06/01/2026",
+        "period_end": "06/30/2026",
+        "payroll_deposits": "$3,081.03",
+        "existing_debt_payments": "$215.67",
+        "bank_name": "Harbor Trust Bank",
+        "account_last4": "0539"
+      },
+      "canonical": {
+        "account_holder": "ines marisol pena",
+        "period_start": "2026-06-01",
+        "period_end": "2026-06-30",
+        "payroll_deposits": "3081.03",
+        "existing_debt_payments": "215.67"
+      },
+      "footer_text": null
+    },
+    {
+      "doc_type": "utility_bill",
+      "index": 1,
+      "fields": {
+        "account_holder": "Inés Marisol Peña",
+        "service_address": "5154 Pine Lane, Charlotte, NC 28277",
+        "bill_date": "06/18/2026",
+        "provider": "Metro Water & Power",
+        "amount_due": "$77.03"
+      },
+      "canonical": {
+        "account_holder": "ines marisol pena",
+        "service_address": "5154 pine lane charlotte nc 28277",
+        "bill_date": "2026-06-18"
+      },
+      "footer_text": null
+    }
+  ],
+  "ground_truth": {
+    "application_id": "APP-0006",
+    "owner_id": "analyst_1",
+    "split": "test",
+    "seed": 42,
+    "policy_version": "1.0.0",
+    "as_of_date": "2026-06-30",
+    "defects": [
+      {
+        "defect_type": "INCOME_MISMATCH",
+        "rule_ids": [
+          "R-3.1",
+          "R-3.2"
+        ],
+        "doc_types": [
+          "application_form",
+          "payslip",
+          "employment_letter"
+        ],
+        "field": "declared_monthly_income",
+        "description": "declared income differs from documented income by 25.4%",
+        "near_threshold": false,
+        "details": {}
+      },
+      {
+        "defect_type": "ID_MISMATCH",
+        "rule_ids": [
+          "R-2.2"
+        ],
+        "doc_types": [
+          "application_form",
+          "id_document"
+        ],
+        "field": "id_number",
+        "description": "transposed digits on application_form",
+        "near_threshold": false,
+        "details": {}
+      },
+      {
+        "defect_type": "MISSING_DOC",
+        "rule_ids": [
+          "R-1.3"
+        ],
+        "doc_types": [
+          "bank_statement"
+        ],
+        "field": null,
+        "description": "bank_statement #1 is missing from the file",
+        "near_threshold": false,
+        "details": {}
+      }
+    ],
+    "hard_negatives": [],
+    "requires_mandatory_review": false,
+    "expected_status": "needs_review"
+  }
+}
