@@ -345,3 +345,55 @@ This is the study material for defending the architecture in interviews.
 - **D-007 follow-up:** the profile `credit-agent` currently runs with AdministratorAccess, the widest
   possible. Moving it to a dedicated least-privilege user is now a higher-priority item before
   anything is published.
+
+---
+
+## D-025 — Extraction behind an `Extractor` contract, with a zero-cost text-layer fallback
+
+- **Date:** 2026-10-14
+- **Decision:** `extract(pdf, doc_type) -> RawExtraction` (lines, key-value pairs, confidence) is the single
+  extraction interface. `TextLayerExtractor` (pypdf, no OCR, no AWS) is implemented now; the Textract
+  client will implement the same contract once the account is activated and real responses exist to be
+  used as fixtures. `CachedExtractor` wraps any extractor: key = SHA-256 of the PDF + document type, under
+  the extractor name and version, written atomically; a corrupted entry is re-extracted. `doc_type` is a
+  parameter because Textract QUERIES need document-specific questions.
+- **Alternatives:** Textract only (blocked for days, tests would need AWS); a multimodal LLM as extractor
+  (rejected: document text would reach the model at extraction time, exposing the pipeline to prompt
+  injection with no per-field confidence); local OCR such as Tesseract (possible later for noisy scans).
+- **Why:** tests and CI must run without AWS or cost; the project must keep moving while the account is
+  being activated; every document is extracted once.
+- **Trade-off / honesty rules:** digital PDFs are the easy case, so text-layer accuracy (100% on the 356
+  generated documents) validates the plumbing, not extraction quality. There is no OCR confidence
+  (reported as 1.0), so the low-confidence -> human-review path cannot be exercised with this extractor.
+  Any metric in the README states which extractor produced it; numbers from different extractors are
+  never mixed. Document type comes from the upload (file name), classification is out of scope.
+
+## D-026 — Printed labels are a shared contract; use pypdf "layout" mode; no continuation lines
+
+- **Date:** 2026-10-14
+- **Decision:** `extraction/schema.py` holds the printed label of every field. The renderer prints them
+  and the extractors look for them (fuzzy match, similarity >= 0.85, so OCR noise does not break it
+  but unrelated keys are ignored rather than guessed). `canonicalize()` is the single normalization
+  used for truth, extraction and, later, the rules.
+- **Found while testing:** pypdf's default text mode sometimes splits "Label: value" across lines;
+  `extraction_mode="layout"` keeps them together. The longest scored value is 48 characters and fits one
+  line; only decorative fields (where an injection can hide) wrap, and they are not scored.
+- **Trade-off:** the synthetic templates are fixed, so extraction accuracy here says nothing about
+  layouts never seen before. This limitation goes in the README.
+
+## D-027 — AWS free plan, Textract activation delay, and re-ordered work
+
+- **Date:** 2026-10-14
+- **Situation:** the account is on the AWS Free Plan with about $100 in credits; Textract needs
+  activation (the owner reports it takes a couple of days after changing plan).
+- **Facts (AWS Free Tier FAQ, https://aws.amazon.com/free/free-tier-faqs/ — to be confirmed in the Billing
+  console):** upgrading to a paid plan keeps the remaining credits, applied to future bills until they
+  expire (12 months from account creation); the free plan itself ends at 6 months from opening or when
+  credits run out, and an account that does not upgrade is closed (data retained 90 days).
+  Open items to check in Billing: the plan end date, and whether credits cover Bedrock Claude models.
+- **Cost estimate (NOT verified for us-east-2):** Textract Forms + Queries is about $0.065-0.07 per page
+  in us-west-2, so a full 356-page run without cache would be about $23-25 and the first 3 files about
+  $2. The official price for Ohio must be checked and recorded with a date in `config.py` before any run.
+- **Decision:** continue with work that needs no Textract (extraction contract, model gateway, rules,
+  injection detector, evaluation harness). Textract integration and the real-response fixtures follow
+  activation. Tier priorities are unchanged; only the order inside days 2-3 moves.

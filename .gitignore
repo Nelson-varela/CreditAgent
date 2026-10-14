@@ -6,6 +6,7 @@
 # Local assistant instructions (kept out of the public repo, see docs/decisions.md D-005)
 CLAUDE.md
 .claude/
+.docs/decisions.md
 
 # Synthetic documents are regenerated from the seed; ground truth IS versioned
 data/synthetic/

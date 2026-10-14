@@ -24,6 +24,7 @@ from reportlab.pdfgen.canvas import Canvas
 from reportlab.platypus import Flowable, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 from reportlab.platypus.doctemplate import LayoutError
 
+from credit_agent.extraction.schema import LABELS
 from credit_agent.generator.models import DocumentContent
 from credit_agent.normalize import normalize_date
 from credit_agent.schemas import DocType
@@ -39,49 +40,6 @@ TITLES = {
     DocType.EMPLOYMENT_LETTER: "EMPLOYMENT VERIFICATION LETTER",
     DocType.BANK_STATEMENT: "MONTHLY ACCOUNT STATEMENT",
     DocType.UTILITY_BILL: "UTILITY BILL",
-}
-
-# Printed label for each field, in print order. Fields absent from a document are skipped.
-LABELS: dict[DocType, dict[str, str]] = {
-    DocType.APPLICATION_FORM: {
-        "application_date": "Application date",
-        "full_name": "Full name",
-        "id_number": "State ID / driver license no.",
-        "date_of_birth": "Date of birth",
-        "address": "Residential address",
-        "declared_monthly_income": "Declared monthly net income",
-        "requested_amount": "Requested amount",
-        "term_months": "Term (months)",
-        "loan_purpose": "Purpose of loan",
-    },
-    DocType.ID_DOCUMENT: {
-        "full_name": "Name",
-        "id_number": "ID No.",
-        "date_of_birth": "Date of birth",
-        "issue_date": "Issued",
-        "expiry_date": "Expires",
-    },
-    DocType.PAYSLIP: {
-        "employer": "Employer",
-        "full_name": "Employee",
-        "pay_period_start": "Pay period start",
-        "pay_period_end": "Pay period end",
-        "net_salary": "Net pay",
-    },
-    DocType.BANK_STATEMENT: {
-        "account_holder": "Account holder",
-        "account_last4": "Account ending in",
-        "period_start": "Statement period start",
-        "period_end": "Statement period end",
-        "payroll_deposits": "Total payroll deposits",
-        "existing_debt_payments": "Total loan / credit payments",
-    },
-    DocType.UTILITY_BILL: {
-        "account_holder": "Account holder",
-        "service_address": "Service address",
-        "bill_date": "Bill date",
-        "amount_due": "Amount due",
-    },
 }
 
 _styles = getSampleStyleSheet()
