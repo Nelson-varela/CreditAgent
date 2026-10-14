@@ -1,0 +1,27 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Local assistant instructions (kept out of the public repo, see docs/decisions.md D-005)
+CLAUDE.md
+.claude/
+
+# Synthetic documents are regenerated from the seed; ground truth IS versioned
+data/synthetic/
+# Development caches (Textract / Bedrock responses)
+data/cache/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

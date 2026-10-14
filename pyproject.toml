@@ -1,0 +1,38 @@
+[project]
+name = "credit-file-agent"
+version = "0.1.0"
+description = "Reference implementation of a credit file review agent (synthetic data only)."
+requires-python = ">=3.11"
+dependencies = [
+    "boto3==1.43.113",
+    "faker==40.43.0",
+    "pydantic==2.14.1",
+    "pydantic-settings==2.16.0",
+    "pyyaml==6.0.3",
+    "reportlab==5.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "moto[dynamodb,s3]==5.2.4",
+    "pytest==9.1.1",
+    "ruff==0.17.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/credit_agent"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["aws: tests that call real AWS (not run in CI)"]
