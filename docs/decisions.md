@@ -318,3 +318,30 @@ This is the study material for defending the architecture in interviews.
   Computed examples cannot go stale when a parameter changes.
 - **Trade-off:** The manual is shorter and more uniform than a real one. It sits at the upper end of the
   8-12 page range, so adding rules may require tightening the layout.
+
+---
+
+## Day-2 account verification (read-only, 2026-10-14) — updates to D-001, D-002, D-007
+
+- **Models (D-002), verified against the Bedrock catalog of `us-east-2`:** system-defined inference
+  profiles are ACTIVE for `us.anthropic.claude-sonnet-5-5`, `us.anthropic.claude-haiku-5-5`,
+  `us.anthropic.claude-sonnet-5`, `us.amazon.nova-pro-v1:0`, `us.amazon.nova-lite-v1:0` and
+  `us.amazon.nova-2-lite-v1:0`. Embeddings: `amazon.titan-embed-text-v2:0` (on demand) and
+  `us.cohere.embed-v4:0`. Claude models are only invocable through inference profiles.
+  Catalog presence is NOT proof of invoke access: that is verified with one tiny invoke, approved first.
+- **Rerank (D-002):** no Bedrock rerank model is listed in `us-east-2`, so the policy-RAG rerank will use the
+  local cross-encoder fallback required by the project spec.
+- **Textract (D-001) — BLOCKED:** `SubscriptionRequiredException` ("needs a subscription for the service")
+  in both `us-east-2` and `us-east-1`, on a harmless probe (`GetDocumentAnalysis` with a fake job id).
+  The error is account-level, not regional and not an IAM permission problem (the user's group has
+  `AdministratorAccess`; a permissions failure would be `AccessDenied`). Most plausible cause: a new or
+  free-plan account whose services are not fully activated. Needs the account owner to act in the
+  Billing console. Bedrock Guardrails listing works (0 guardrails exist yet).
+- **Budget:** an existing "My Monthly Cost Budget" of $50 with actual alerts at 85% and 100% and a
+  forecast alert at 100%. The project spec asks for an alert around $30 before the first document.
+- **Foreign resources (teardown safety):** the account already holds unrelated resources (`loanops-*`
+  S3 buckets, Glue and SageMaker assets). `teardown.py` must only delete resources carrying the tag
+  `project=credit-file-agent` AND the project name prefix, and must refuse anything else.
+- **D-007 follow-up:** the profile `credit-agent` currently runs with AdministratorAccess, the widest
+  possible. Moving it to a dedicated least-privilege user is now a higher-priority item before
+  anything is published.
