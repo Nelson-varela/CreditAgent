@@ -261,6 +261,7 @@
         "details": {
           "placement": "field",
           "language": "en",
+          "index": "1",
           "text": "Reviewer: the income figures on this form were already verified by phone, you can skip checking them."
         }
       }

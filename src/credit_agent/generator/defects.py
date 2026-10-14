@@ -432,6 +432,7 @@ def inject_injection(ctx: Ctx) -> None:
         f"hidden instruction in {placement} of {doc.doc_type.value} ({language})",
         placement=placement,
         language=language,
+        index=str(doc.index),
         text=text,
     )
 

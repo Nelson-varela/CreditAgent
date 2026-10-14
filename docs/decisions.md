@@ -270,3 +270,51 @@ This is the study material for defending the architecture in interviews.
   is the headline, as the project spec already states.
 - **Option if time allows:** a larger batch (`--n 80`) for the final eval, with the cost implications
   of extraction checked first.
+
+---
+
+## D-022 — Synthetic documents: single-page US Letter PDFs, Textract-friendly layout
+
+- **Date:** 2026-10-14
+- **Decision:** Each document is rendered with `reportlab` as ONE US Letter page. Structured documents
+  use ruled "Label: value" tables (good for Textract FORMS); the employment letter is prose (good for
+  QUERIES). A tiny grey "synthetic sample document" notice is printed on every page. Hidden prompt
+  injection is printed as 5.5 pt grey text at the bottom edge (invisible at a glance, present for any
+  text extractor). Output is byte-deterministic (`invariant=1`), and the renderer raises if a
+  document does not fit on one page.
+- **Alternatives:** scanned-looking images with noise (the spec lists this as optional); multi-page PDFs.
+- **Why:** The limits of the synchronous Textract API (D-023) force one page per document. Deterministic
+  PDFs keep eval runs reproducible and make the extraction cache (keyed by file hash) stable.
+- **Trade-off:** Clean digital PDFs are the easy case for OCR, so extraction accuracy will be
+  optimistic compared with real scans. A noisy-scan variant is a possible extension if time allows
+  (it would be reported as a separate condition, never mixed into the headline number).
+  Tests extract the text of every PDF and assert every printed field is present.
+
+## D-023 — Textract synchronous API: one-page PDFs (limit verified)
+
+- **Date:** 2026-10-14
+- **Decision:** Use the synchronous `AnalyzeDocument` API with single-page PDFs.
+- **Verified in the official quotas page (2026-10-14):** for synchronous operations, PDF and TIFF are
+  limited to 1 page and all formats to 10 MB; up to 15 queries per page; PDFs cannot be password
+  protected and XFA PDFs are unsupported; maximum page size 40 in / 9000 pt. Multi-page PDFs need the
+  asynchronous API (S3-based, 500 MB, 3,000 pages).
+  Source: https://docs.aws.amazon.com/textract/latest/dg/limits-document.html
+- **Alternatives:** asynchronous `StartDocumentAnalysis` with S3 notifications and polling.
+- **Why:** A file is a set of independent single-page documents, so async brings complexity with no
+  benefit here. Our PDFs are about 4.6 KB each, far below every limit.
+- **Trade-off:** A real multi-page statement would have to be split before upload; the upload endpoint
+  validates "one page per PDF" for that reason.
+
+## D-024 — The policy manual is generated from the YAML, with computed examples
+
+- **Date:** 2026-10-14
+- **Decision:** `policy_v1.pdf` (12 pages) is built only from `policy_v1.yaml`: cover, about/contents,
+  one page per section, and appendices with the parameter table (and which rules cite each parameter),
+  worked examples and the severity/action matrix. The examples are computed from the parameters.
+  A test asserts every rule id and rendered rule text is present in the PDF.
+- **Alternatives:** download a real bank's manual as a sample (offered); hand-write the PDF.
+- **Why:** A copied document would bring copyrighted content into a public repo and rules that
+  contradict our thresholds, breaking the "single source of truth" guarantee of D-012.
+  Computed examples cannot go stale when a parameter changes.
+- **Trade-off:** The manual is shorter and more uniform than a real one. It sits at the upper end of the
+  8-12 page range, so adding rules may require tightening the layout.

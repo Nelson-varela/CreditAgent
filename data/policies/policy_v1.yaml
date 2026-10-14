@@ -91,7 +91,7 @@ sections:
       - rule_id: "R-2.2"
         title: "Identity number consistency"
         text: >-
-          The national ID number must be identical on the application form, the identity document
+          The state ID / driver license number must be identical on the application form, the identity document
           and every other document that shows it, after removing dots, spaces and dashes. Any
           remaining difference, including a single transposed digit, is an ID mismatch.
         defect_type: ID_MISMATCH
